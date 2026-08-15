@@ -8,6 +8,9 @@ interface RazorpayOptions {
   description: string;
   order_id: string;
   handler: (response: any) => void;
+  modal: {
+    ondismiss: () => void;
+  };
   prefill: {
     name: string;
     email: string;
@@ -20,7 +23,7 @@ interface RazorpayOptions {
 
 export function loadRazorpayScript(): Promise<boolean> {
   return new Promise((resolve) => {
-    if (window.hasOwnProperty('Razorpay')) {
+    if ((window as any).Razorpay) {
       resolve(true);
       return;
     }
@@ -55,10 +58,15 @@ export async function checkoutWithRazorpay({
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ amount, serviceNames, customerInfo }),
       });
+
+      if (!response.ok) {
+        throw new Error(`Server responded with ${response.status}`);
+      }
+
       data = await response.json();
-    } catch (parseError) {
-      // If backend is missing (e.g. running 'vite' locally without Netlify CLI or server.ts), simulate order
-      console.warn('Backend not found, falling back to local simulation mode.', parseError);
+    } catch (fetchError) {
+      // If backend/API is not available, fall back to simulation
+      console.warn('Payment API not reachable, falling back to simulation mode.', fetchError);
       data = {
         success: true,
         isMock: true,
@@ -74,9 +82,9 @@ export async function checkoutWithRazorpay({
       throw new Error(data.error || 'Failed to create payment order');
     }
 
+    // Mock/simulation mode — no real Razorpay keys configured
     if (data.isMock) {
-      // Elegant checkout simulation for preview/mock environments
-      toast.success('Simulation Mode: Launching payment demo...');
+      toast.success('Demo Mode: Simulating payment flow...');
       return {
         isMock: true,
         orderId: data.orderId,
@@ -86,7 +94,7 @@ export async function checkoutWithRazorpay({
       };
     }
 
-    // Load Razorpay library
+    // Real Razorpay payment — load the SDK
     const isLoaded = await loadRazorpayScript();
     if (!isLoaded) {
       throw new Error('Razorpay SDK failed to load. Please check your internet connection.');
@@ -95,37 +103,49 @@ export async function checkoutWithRazorpay({
     return new Promise((resolve, reject) => {
       const options: RazorpayOptions = {
         key: data.keyId,
-        amount: data.amount * 100, // paisa
+        // Amount is already in paisa from the server — do NOT multiply again
+        amount: data.amount * 100,
         currency: 'INR',
         name: 'EXTEND KART',
         description: serviceNames.substring(0, 255),
         order_id: data.orderId,
         handler: function (res: any) {
-          toast.success('Payment verified successfully!');
-          onSuccess(res.razorpay_payment_id || 'pay_mock_success');
+          toast.success('Payment verified successfully! 🎉');
+          onSuccess(res.razorpay_payment_id || 'pay_success');
           resolve(res);
+        },
+        modal: {
+          ondismiss: function () {
+            // User closed the Razorpay popup without paying
+            toast('Payment cancelled.', { icon: '⚠️' });
+            onFailure('Payment cancelled by user');
+            resolve({ cancelled: true });
+          },
         },
         prefill: {
           name: customerInfo.name,
-          email: customerInfo.email || 'extendkart@gmail.com',
+          email: customerInfo.email || '',
           contact: customerInfo.phone,
         },
         theme: {
-          color: '#1D9E75', // Emerald Brand Color
+          color: '#1D9E75',
         },
       };
 
       const rzp = new (window as any).Razorpay(options);
+
       rzp.on('payment.failed', function (res: any) {
-        toast.error(res.error.description || 'Payment transaction failed');
-        onFailure(res.error.description);
-        reject(new Error(res.error.description));
+        const errorMsg = res.error?.description || 'Payment transaction failed';
+        toast.error(errorMsg);
+        onFailure(errorMsg);
+        reject(new Error(errorMsg));
       });
+
       rzp.open();
     });
   } catch (error: any) {
-    console.error('Razorpay payment setup error:', error);
-    toast.error(error.message || 'An error occurred during payment checkout');
+    console.error('Razorpay checkout error:', error);
+    toast.error(error.message || 'An error occurred during payment');
     onFailure(error.message);
     throw error;
   }

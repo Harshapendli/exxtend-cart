@@ -66,15 +66,21 @@ export default function CartSheet({ onSuccessRedirect }: CartSheetProps) {
     const serviceNames = items.map((i) => `${i.name} (x${i.quantity})`).join(', ');
 
     try {
-      // 1. Submit to Supabase
-      await submitOrderWithDocuments(customer, items, total, files);
+      // 1. Try saving order to Supabase (non-blocking — don't let this kill payment)
+      try {
+        await submitOrderWithDocuments(customer, items, total, files);
+      } catch (supabaseErr) {
+        console.warn('Supabase order save failed (non-blocking):', supabaseErr);
+        // Continue to payment — order details are also captured by Razorpay
+      }
 
-      // 2. Proceed with Razorpay
+      // 2. Proceed with Razorpay payment
       const result = await checkoutWithRazorpay({
         amount: total,
         serviceNames,
         customerInfo: customer,
         onSuccess: (paymentId) => {
+          setIsSubmitting(false);
           clearCart();
           closeCart();
           onSuccessRedirect();
@@ -88,9 +94,12 @@ export default function CartSheet({ onSuccessRedirect }: CartSheetProps) {
       if (result && (result as any).isMock) {
         setCheckoutStep('simulating');
         setSimulationCountdown(3);
+      } else {
+        setIsSubmitting(false);
       }
     } catch (err) {
-      toast.error('Failed to submit order. Please try again.');
+      console.error('Checkout error:', err);
+      toast.error('Payment could not be processed. Please try again.');
       setIsSubmitting(false);
     }
   };
