@@ -84,7 +84,7 @@ export default function About() {
             {[
               { val: '500+', label: 'Customers Served' },
               { val: '4.9 ⭐', label: 'Google Rating' },
-              { val: '30+', label: 'Services Available' },
+              { val: '40+', label: 'Services Available' },
               { val: '3+ Years', label: 'Active Experience' },
             ].map((stat, i) => (
               <div 

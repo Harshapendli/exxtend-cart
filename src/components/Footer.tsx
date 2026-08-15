@@ -62,12 +62,13 @@ export default function Footer({ onNavigate }: FooterProps) {
             </h4>
             <ul className="space-y-2.5 text-sm text-gray-400">
               {[
-                'FSSAI State Licence',
-                'UDYAM / MSME Setup',
-                'Trade Licence Filing',
-                'Labour Certification',
-                'Passport Application',
-                'Digital Quality Printing',
+                'FSSAI Licence',
+                'UDYAM / MSME',
+                'Trade Licence',
+                'Passport Assistance',
+                'Property Registration',
+                'Bhu Bharati Services',
+                'Digital Printing',
               ].map((serv, idx) => (
                 <li key={idx}>
                   <button
@@ -97,6 +98,12 @@ export default function Footer({ onNavigate }: FooterProps) {
                 <a href="tel:09951119995" className="flex gap-2.5 items-center hover:text-brand transition-colors">
                   <HiPhone className="h-4 w-4 text-brand" />
                   <span className="font-sans">099511 19995</span>
+                </a>
+              </li>
+              <li>
+                <a href="tel:07330003691" className="flex gap-2.5 items-center hover:text-brand transition-colors">
+                  <HiPhone className="h-4 w-4 text-brand" />
+                  <span className="font-sans">073300 03691</span>
                 </a>
               </li>
               <li>

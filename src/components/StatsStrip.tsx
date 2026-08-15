@@ -79,7 +79,7 @@ export default function StatsStrip() {
             icon={HiHeart}
           />
           <AnimatedCounter
-            value={30}
+            value={40}
             suffix="+"
             label="Our Services"
             icon={HiWrenchScrewdriver}

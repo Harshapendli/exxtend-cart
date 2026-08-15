@@ -15,8 +15,8 @@ interface HomeProps {
 }
 
 export default function Home({ onNavigate }: HomeProps) {
-  // Show first 6 services as a teaser
-  const featuredServices = SERVICES.slice(0, 6);
+  // Show first 8 services as a teaser
+  const featuredServices = SERVICES.slice(0, 8);
 
   return (
     <div id="home-view">
@@ -50,7 +50,7 @@ export default function Home({ onNavigate }: HomeProps) {
           </div>
 
           {/* Grid of first 6 services */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {featuredServices.map((service, idx) => (
               <ServiceCard key={service.id} service={service} index={idx} />
             ))}

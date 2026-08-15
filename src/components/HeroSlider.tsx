@@ -19,34 +19,34 @@ interface Slide {
 const SLIDES: Slide[] = [
   {
     badge: "Warangal's #1 Service Hub",
-    heading: "Fast Digital\nDocumentation\nServices",
-    subtitle: "FSSAI, MSME, Passport, Trade Licence & more — all under one roof with fast turnaround.",
-    ctaText1: "Explore Services",
+    heading: "All Government\nServices Under\nOne Roof",
+    subtitle: "FSSAI, MSME, Passport, Trade Licence, Property Registration, Bhu Bharati & 40+ services — fast turnaround, zero hassle.",
+    ctaText1: "Explore 40+ Services",
     ctaLink1: "services",
     ctaText2: "Book Appointment",
     ctaLink2: "contact",
     bgSeed: "printing-hub",
     bgGradient: "from-[#eefbf7] via-white to-white",
     storeImage: "/store_image_1.jpeg",
-    imageCaption: "Main Entrance Setup"
+    imageCaption: "Main Entrance"
   },
   {
     badge: "Trusted & Government Certified",
-    heading: "Government\nLicences\nMade Easy",
-    subtitle: "We handle FSSAI registrations, Trade licences, and Labour certified filings with zero hassle.",
-    ctaText1: "View Prices",
+    heading: "Licences &\nRegistrations\nMade Simple",
+    subtitle: "From FSSAI food licences to Property Sale Deeds, Labour Licences to Society Registrations — we handle it all professionally.",
+    ctaText1: "View All Prices",
     ctaLink1: "services",
-    ctaText2: "Order Now",
-    ctaLink2: "services",
+    ctaText2: "Talk to Expert",
+    ctaLink2: "contact",
     bgSeed: "certificates",
     bgGradient: "from-[#f0f4ff] via-white to-white",
     storeImage: "/store_image_2.jpeg",
-    imageCaption: "Full Office Overview"
+    imageCaption: "Office Overview"
   },
   {
     badge: "100% Secure Payments",
     heading: "Pay Safely\nwith Razorpay\n& UPI",
-    subtitle: "Instant payment confirmations via Razorpay, UPI, GPay, PhonePe, and major Net Banking systems.",
+    subtitle: "Instant payment confirmations via Razorpay, UPI, GPay, PhonePe, and Net Banking. Cash at counter also accepted.",
     ctaText1: "Shop Now",
     ctaLink1: "services",
     ctaText2: "Contact Us",
@@ -54,7 +54,7 @@ const SLIDES: Slide[] = [
     bgSeed: "secure-payment",
     bgGradient: "from-[#fbf7ee] via-white to-white",
     storeImage: "/store_image_3.jpeg",
-    imageCaption: "Our Workstations"
+    imageCaption: "Workstations"
   }
 ];
 

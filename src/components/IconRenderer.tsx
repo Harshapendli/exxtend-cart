@@ -13,7 +13,28 @@ import {
   HiCurrencyRupee,
   HiAcademicCap,
   HiPhoto,
-  HiMap
+  HiMap,
+  HiHome,
+  HiUserGroup,
+  HiWrenchScrewdriver,
+  HiBookOpen,
+  HiClipboardDocumentList,
+  HiArrowsRightLeft,
+  HiMagnifyingGlass,
+  HiBanknotes,
+  HiPaperAirplane,
+  HiDevicePhoneMobile,
+  HiFilm,
+  HiSquare3Stack3D,
+  HiClipboardDocumentCheck,
+  HiHandRaised,
+  HiScale,
+  HiKey,
+  HiArchiveBox,
+  HiRectangleGroup,
+  HiComputerDesktop,
+  HiHeart,
+  HiStar,
 } from 'react-icons/hi2';
 
 const ICON_MAP: Record<string, React.ComponentType<{ className?: string }>> = {
@@ -30,7 +51,28 @@ const ICON_MAP: Record<string, React.ComponentType<{ className?: string }>> = {
   HiCurrencyRupee,
   HiAcademicCap,
   HiPhoto,
-  HiMap
+  HiMap,
+  HiHome,
+  HiUserGroup,
+  HiWrenchScrewdriver,
+  HiBookOpen,
+  HiClipboardDocumentList,
+  HiArrowsRightLeft,
+  HiMagnifyingGlass,
+  HiBanknotes,
+  HiPaperAirplane,
+  HiDevicePhoneMobile,
+  HiFilm,
+  HiSquare3Stack3D,
+  HiClipboardDocumentCheck,
+  HiHandRaised,
+  HiScale,
+  HiKey,
+  HiArchiveBox,
+  HiRectangleGroup,
+  HiComputerDesktop,
+  HiHeart,
+  HiStar,
 };
 
 interface IconRendererProps {
@@ -39,6 +81,6 @@ interface IconRendererProps {
 }
 
 export default function IconRenderer({ name, className = '' }: IconRendererProps) {
-  const IconComponent = ICON_MAP[name] || HiDocumentText; // Fallback to HiDocumentText if not found
+  const IconComponent = ICON_MAP[name] || HiDocumentText;
   return <IconComponent className={className} />;
 }
