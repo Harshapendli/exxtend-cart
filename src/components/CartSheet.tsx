@@ -90,13 +90,8 @@ export default function CartSheet({ onSuccessRedirect }: CartSheetProps) {
         },
       });
 
-      // If simulated payment is triggered
-      if (result && (result as any).isMock) {
-        setCheckoutStep('simulating');
-        setSimulationCountdown(3);
-      } else {
-        setIsSubmitting(false);
-      }
+      // Payment flow handled by Razorpay callbacks (onSuccess/onFailure)
+      setIsSubmitting(false);
     } catch (err) {
       console.error('Checkout error:', err);
       toast.error('Payment could not be processed. Please try again.');

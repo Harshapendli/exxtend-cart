@@ -59,21 +59,24 @@ export async function checkoutWithRazorpay({
         body: JSON.stringify({ amount, serviceNames, customerInfo }),
       });
 
+      // Check if we got HTML back instead of JSON (means API route isn't working)
+      const contentType = response.headers.get('content-type') || '';
+      if (contentType.includes('text/html')) {
+        console.error('API returned HTML instead of JSON — API route not configured properly on hosting.');
+        throw new Error('Payment server not configured. Please contact support.');
+      }
+
       if (!response.ok) {
-        throw new Error(`Server responded with ${response.status}`);
+        const errBody = await response.json().catch(() => ({}));
+        throw new Error(errBody.error || `Server responded with ${response.status}`);
       }
 
       data = await response.json();
-    } catch (fetchError) {
-      // If backend/API is not available, fall back to simulation
-      console.warn('Payment API not reachable, falling back to simulation mode.', fetchError);
-      data = {
-        success: true,
-        isMock: true,
-        orderId: `mock_${Math.random().toString(36).substr(2, 9)}`,
-        amount: amount,
-        keyId: 'rzp_test_mock_key'
-      };
+    } catch (fetchError: any) {
+      console.error('Payment API error:', fetchError);
+      toast.error(fetchError.message || 'Could not reach payment server. Please try again.');
+      onFailure(fetchError.message || 'Payment API unreachable');
+      throw fetchError;
     }
 
     toast.dismiss(loadingToast);
