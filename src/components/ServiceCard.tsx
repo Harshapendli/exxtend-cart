@@ -4,7 +4,7 @@ import { Service } from '../types';
 import { useCartStore } from '../lib/cart-store';
 import { formatPrice } from '../lib/utils';
 import IconRenderer from './IconRenderer';
-import { HiPlus, HiCheck } from 'react-icons/hi2';
+import { HiPlus, HiCheck, HiChevronDown, HiCheckCircle } from 'react-icons/hi2';
 
 interface ServiceCardProps {
   service: Service;
@@ -16,6 +16,7 @@ export default function ServiceCard({ service, index }: ServiceCardProps) {
   const addItem = useCartStore((state) => state.addItem);
   const [added, setAdded] = useState(false);
   const [showZoom, setShowZoom] = useState(false);
+  const [showRequirements, setShowRequirements] = useState(false);
 
   const handleAddToCart = (e: React.MouseEvent) => {
     e.stopPropagation();
@@ -51,7 +52,7 @@ export default function ServiceCard({ service, index }: ServiceCardProps) {
 
           {/* Optional Flyer Image with zoom action */}
           {service.imageUrl && (
-            <div 
+            <div
               onClick={() => setShowZoom(true)}
               className="relative h-48 w-full rounded-xl overflow-hidden mb-5 border border-gray-100 bg-gray-50 cursor-zoom-in"
             >
@@ -71,10 +72,63 @@ export default function ServiceCard({ service, index }: ServiceCardProps) {
           <h3 className="text-lg font-bold font-display text-gray-900 group-hover:text-brand transition-colors duration-200 line-clamp-1 mb-2">
             {service.name}
           </h3>
-          
-          <p className="text-sm text-gray-500 line-clamp-2 mb-6 font-sans">
+
+          <p className="text-sm text-gray-500 line-clamp-2 mb-4 font-sans">
             {service.description}
           </p>
+
+          {/* Requirements Dropdown */}
+          {service.requirements && service.requirements.length > 0 && (
+            <div className="mb-4">
+              <button
+                onClick={(e) => {
+                  e.stopPropagation();
+                  setShowRequirements(!showRequirements);
+                }}
+                className="flex items-center gap-2 w-full text-left px-3 py-2 rounded-lg bg-brand-50/50 hover:bg-brand-50 border border-brand/10 transition-all cursor-pointer group/req"
+              >
+                {/* Mini EXTEND KART logo */}
+                <img
+                  src="/extend_cart_logo.jpeg"
+                  alt="EK"
+                  className="w-5 h-5 rounded object-cover flex-shrink-0"
+                />
+                <span className="text-[11px] font-bold text-brand uppercase tracking-wider flex-1">
+                  Requirements ({service.requirements.length})
+                </span>
+                <motion.div
+                  animate={{ rotate: showRequirements ? 180 : 0 }}
+                  transition={{ duration: 0.2 }}
+                >
+                  <HiChevronDown className="h-4 w-4 text-brand" />
+                </motion.div>
+              </button>
+
+              <AnimatePresence>
+                {showRequirements && (
+                  <motion.div
+                    initial={{ opacity: 0, height: 0 }}
+                    animate={{ opacity: 1, height: 'auto' }}
+                    exit={{ opacity: 0, height: 0 }}
+                    transition={{ duration: 0.25, ease: [0.16, 1, 0.3, 1] }}
+                    className="overflow-hidden"
+                  >
+                    <div className="mt-2 bg-gray-50 border border-gray-100 rounded-xl p-3 space-y-1.5">
+                      {service.requirements.map((req, i) => (
+                        <div
+                          key={i}
+                          className="flex items-start gap-2 text-xs text-gray-600"
+                        >
+                          <HiCheckCircle className="h-3.5 w-3.5 text-brand mt-0.5 flex-shrink-0" />
+                          <span className="leading-relaxed">{req}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
+          )}
         </div>
 
         {/* Pricing and Action Button */}
@@ -133,7 +187,7 @@ export default function ServiceCard({ service, index }: ServiceCardProps) {
             onClick={() => setShowZoom(false)}
             className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/90 backdrop-blur-md cursor-zoom-out"
           >
-            <button 
+            <button
               onClick={() => setShowZoom(false)}
               className="absolute top-6 right-6 text-white hover:text-brand transition-colors p-3 bg-white/10 hover:bg-white/20 rounded-full"
             >
@@ -141,7 +195,7 @@ export default function ServiceCard({ service, index }: ServiceCardProps) {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M6 18L18 6M6 6l12 12" />
               </svg>
             </button>
-            
+
             <motion.div
               initial={{ scale: 0.9, y: 20 }}
               animate={{ scale: 1, y: 0 }}

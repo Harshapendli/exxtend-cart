@@ -12,7 +12,15 @@ export const SERVICES: Service[] = [
     iconName: 'HiShieldCheck',
     category: 'Licences',
     description: 'FSSAI Basic Registration for small food businesses with turnover up to ₹12 Lakhs. Fast, hassle-free process with legal compliance guarantee.',
-    imageUrl: '/menu_fssai.jpeg'
+    imageUrl: '/menu_fssai.jpeg',
+    requirements: [
+      'Aadhaar Card of the owner',
+      'PAN Card',
+      'Passport-size photograph',
+      'Business address proof (Electricity bill / Rent agreement)',
+      'Nature of business details',
+      'List of food products to be handled',
+    ],
   },
   {
     id: 'fssai-state',
@@ -22,7 +30,17 @@ export const SERVICES: Service[] = [
     iconName: 'HiShieldCheck',
     category: 'Licences',
     description: 'Complete FSSAI State Licence registration for medium food businesses with turnover ₹12 Lakhs – ₹20 Crore. End-to-end documentation support.',
-    imageUrl: '/menu_state_fssai.jpeg'
+    imageUrl: '/menu_state_fssai.jpeg',
+    requirements: [
+      'Aadhaar Card & PAN Card of the owner',
+      'Passport-size photograph',
+      'Business entity proof (Partnership Deed / MOA / AOA)',
+      'Food safety management plan',
+      'List of food products with brand name',
+      'NOC from local municipality',
+      'Water testing report',
+      'Business premises proof (Rent agreement / Ownership docs)',
+    ],
   },
   {
     id: 'fssai-central',
@@ -32,7 +50,19 @@ export const SERVICES: Service[] = [
     iconName: 'HiShieldCheck',
     category: 'Licences',
     description: 'FSSAI Central Licence for large businesses with turnover above ₹20 Crore or Import-Export operations. Full compliance assistance.',
-    imageUrl: '/menu_central_fssai.jpeg'
+    imageUrl: '/menu_central_fssai.jpeg',
+    requirements: [
+      'Aadhaar Card & PAN Card of the owner/directors',
+      'Passport-size photographs',
+      'Business entity proof (Certificate of Incorporation / MOA / AOA)',
+      'Food safety management plan / HACCP certification',
+      'List of food products with brand names',
+      'Import-Export Code (IEC) if applicable',
+      'NOC from local municipality',
+      'Blueprint/layout of the processing unit',
+      'Water testing report',
+      'Source of raw materials details',
+    ],
   },
   {
     id: 'fssai-pricing-consultation',
@@ -42,7 +72,13 @@ export const SERVICES: Service[] = [
     iconName: 'HiShieldCheck',
     category: 'Licences',
     description: 'Expert FSSAI licence consultation with transparent pricing, legal guarantee, and zero hidden fees. Get the right licence for your business.',
-    imageUrl: '/menu_2.jpeg'
+    imageUrl: '/menu_2.jpeg',
+    requirements: [
+      'Business type & turnover details',
+      'Type of food products handled',
+      'Business address details',
+      'Owner Aadhaar Card',
+    ],
   },
   {
     id: 'udyam-msme',
@@ -51,7 +87,15 @@ export const SERVICES: Service[] = [
     priceLabel: '₹300',
     iconName: 'HiBuildingOffice2',
     category: 'Licences',
-    description: 'Quick UDYAM/MSME registration for micro, small & medium enterprises. Get government certified in 24 hours.'
+    description: 'Quick UDYAM/MSME registration for micro, small & medium enterprises. Get government certified in 24 hours.',
+    requirements: [
+      'Aadhaar Card of the owner',
+      'PAN Card of the business / owner',
+      'Business name & type',
+      'Bank account details (Account number, IFSC)',
+      'Investment & turnover details',
+      'Business address',
+    ],
   },
   {
     id: 'trade-licence',
@@ -60,7 +104,15 @@ export const SERVICES: Service[] = [
     priceLabel: '₹2,000',
     iconName: 'HiDocumentText',
     category: 'Licences',
-    description: 'Apply for a Trade Licence for your business. Complete documentation support with fast government approval.'
+    description: 'Apply for a Trade Licence for your business. Complete documentation support with fast government approval.',
+    requirements: [
+      'Aadhaar Card & PAN Card',
+      'Passport-size photograph',
+      'Address proof of business premises',
+      'Rent agreement / Ownership document',
+      'Nature of trade / business activity',
+      'NOC from landlord (if rented)',
+    ],
   },
   {
     id: 'labour-licence',
@@ -69,7 +121,15 @@ export const SERVICES: Service[] = [
     priceLabel: '₹2,000',
     iconName: 'HiIdentification',
     category: 'Licences',
-    description: 'Labour Licence application processing with all required documentation. 100% government-compliant filings.'
+    description: 'Labour Licence application processing with all required documentation. 100% government-compliant filings.',
+    requirements: [
+      'Aadhaar Card & PAN Card of the employer',
+      'Business registration certificate',
+      'List of employees with Aadhaar details',
+      'Nature of work / establishment type',
+      'Address proof of the establishment',
+      'Passport-size photograph',
+    ],
   },
   {
     id: 'driving-licence',
@@ -78,7 +138,16 @@ export const SERVICES: Service[] = [
     priceLabel: '₹6,500',
     iconName: 'HiIdentification',
     category: 'Licences',
-    description: 'Complete assistance for New Driving Licence applications & Renewals. Slot booking, documentation, and RTO coordination.'
+    description: 'Complete assistance for New Driving Licence applications & Renewals. Slot booking, documentation, and RTO coordination.',
+    requirements: [
+      'Aadhaar Card',
+      'Age proof (Birth certificate / 10th marksheet)',
+      'Address proof',
+      'Passport-size photographs (4 copies)',
+      'Learner\'s Licence (for permanent DL)',
+      'Medical certificate (Form 1A)',
+      'Existing DL (for renewal)',
+    ],
   },
 
   // ═══════════════════════════════════════════
@@ -91,7 +160,14 @@ export const SERVICES: Service[] = [
     priceLabel: '₹300',
     iconName: 'HiCreditCard',
     category: 'Documents',
-    description: 'New PAN card application or correction in existing PAN details. Quick processing and doorstep delivery support.'
+    description: 'New PAN card application or correction in existing PAN details. Quick processing and doorstep delivery support.',
+    requirements: [
+      'Aadhaar Card',
+      'Passport-size photograph',
+      'Date of birth proof (Birth certificate / 10th marksheet)',
+      'Address proof (Aadhaar / Voter ID / Passport)',
+      'Existing PAN Card (for corrections)',
+    ],
   },
   {
     id: 'voter-id',
@@ -100,7 +176,13 @@ export const SERVICES: Service[] = [
     priceLabel: '₹200',
     iconName: 'HiIdentification',
     category: 'Documents',
-    description: 'New Voter ID application, corrections, and address change assistance. Complete online filing support.'
+    description: 'New Voter ID application, corrections, and address change assistance. Complete online filing support.',
+    requirements: [
+      'Aadhaar Card',
+      'Passport-size photograph',
+      'Age proof (Birth certificate / 10th marksheet)',
+      'Address proof (Aadhaar / Electricity bill / Ration card)',
+    ],
   },
   {
     id: 'aadhar-update',
@@ -109,7 +191,13 @@ export const SERVICES: Service[] = [
     priceLabel: '₹250',
     iconName: 'HiFingerPrint',
     category: 'Documents',
-    description: 'Update your Aadhaar card — name, address, mobile number, date of birth, or photo correction. Assisted online update.'
+    description: 'Update your Aadhaar card — name, address, mobile number, date of birth, or photo correction. Assisted online update.',
+    requirements: [
+      'Existing Aadhaar Card / Enrollment slip',
+      'Mobile number linked to Aadhaar',
+      'Supporting documents for the correction (e.g. Passport, Birth certificate for DOB change)',
+      'Address proof (for address update)',
+    ],
   },
   {
     id: 'e-shram-card',
@@ -118,7 +206,13 @@ export const SERVICES: Service[] = [
     priceLabel: '₹300',
     iconName: 'HiDocumentCheck',
     category: 'Documents',
-    description: 'E-Shram card registration and printout for unorganized sector workers. Quick online registration.'
+    description: 'E-Shram card registration and printout for unorganized sector workers. Quick online registration.',
+    requirements: [
+      'Aadhaar Card',
+      'Mobile number linked to Aadhaar',
+      'Bank account details (Account number, IFSC)',
+      'Occupation / skill type details',
+    ],
   },
   {
     id: 'railway-divyang',
@@ -127,7 +221,14 @@ export const SERVICES: Service[] = [
     priceLabel: '₹599',
     iconName: 'HiTicket',
     category: 'Documents',
-    description: 'Railway concession card for persons with disabilities. Complete assistance with application & documentation.'
+    description: 'Railway concession card for persons with disabilities. Complete assistance with application & documentation.',
+    requirements: [
+      'Aadhaar Card',
+      'Disability certificate from government hospital',
+      'Passport-size photograph',
+      'Age proof',
+      'Address proof',
+    ],
   },
   {
     id: 'marriage-certificate',
@@ -136,7 +237,17 @@ export const SERVICES: Service[] = [
     priceLabel: '₹4,500',
     iconName: 'HiHeart',
     category: 'Documents',
-    description: 'Marriage certificate registration and processing. Complete documentation, affidavit support, and follow-up.'
+    description: 'Marriage certificate registration and processing. Complete documentation, affidavit support, and follow-up.',
+    requirements: [
+      'Aadhaar Cards of both bride & groom',
+      'Age proof of both (Birth certificate / 10th marksheet)',
+      'Address proof of both parties',
+      'Passport-size photos of bride & groom (4 each)',
+      'Marriage invitation card',
+      'Wedding photographs',
+      'Two witnesses with Aadhaar Cards',
+      'Affidavit of marriage (on stamp paper)',
+    ],
   },
   {
     id: 'ration-card',
@@ -145,7 +256,15 @@ export const SERVICES: Service[] = [
     priceLabel: 'Custom',
     iconName: 'HiClipboardDocumentList',
     category: 'Documents',
-    description: 'New Ration Card application, name addition/deletion, and address corrections. Full assistance with online process.'
+    description: 'New Ration Card application, name addition/deletion, and address corrections. Full assistance with online process.',
+    requirements: [
+      'Aadhaar Cards of all family members',
+      'Address proof (Electricity bill / Gas bill)',
+      'Income certificate',
+      'Passport-size photographs of family head',
+      'Existing Ration Card (for corrections/additions)',
+      'Birth certificates of children (for additions)',
+    ],
   },
 
   // ═══════════════════════════════════════════
@@ -158,7 +277,17 @@ export const SERVICES: Service[] = [
     priceLabel: '₹3,000',
     iconName: 'HiGlobeAlt',
     category: 'Online Services',
-    description: 'End-to-end normal passport application assistance — new passport or renewal. Documentation, slot booking & police verification guidance.'
+    description: 'End-to-end normal passport application assistance — new passport or renewal. Documentation, slot booking & police verification guidance.',
+    requirements: [
+      'Aadhaar Card',
+      'PAN Card',
+      'Voter ID / Ration Card',
+      'Birth certificate / 10th marksheet (age proof)',
+      'Passport-size photographs (white background)',
+      'Address proof (Aadhaar / Electricity bill)',
+      'Old Passport (for renewal)',
+      'Marriage certificate (if name changed after marriage)',
+    ],
   },
   {
     id: 'passport-tatkaal',
@@ -167,7 +296,17 @@ export const SERVICES: Service[] = [
     priceLabel: '₹5,500',
     iconName: 'HiGlobeAlt',
     category: 'Online Services',
-    description: 'Tatkaal (urgent) passport application assistance. Priority processing for time-sensitive travel needs.'
+    description: 'Tatkaal (urgent) passport application assistance. Priority processing for time-sensitive travel needs.',
+    requirements: [
+      'Aadhaar Card',
+      'PAN Card',
+      'Birth certificate / 10th marksheet',
+      'Passport-size photographs (white background)',
+      'Address proof (Aadhaar / Electricity bill)',
+      'Verification certificate from Gazetted officer / Notary',
+      'Old Passport (for renewal)',
+      'Annexure F (identity certificate)',
+    ],
   },
   {
     id: 'us-visa-appointment',
@@ -176,7 +315,17 @@ export const SERVICES: Service[] = [
     priceLabel: 'Custom',
     iconName: 'HiPaperAirplane',
     category: 'Online Services',
-    description: 'US Visa appointment slot booking assistance. DS-160 form filling, interview preparation guidance, and documentation support.'
+    description: 'US Visa appointment slot booking assistance. DS-160 form filling, interview preparation guidance, and documentation support.',
+    requirements: [
+      'Valid Passport (6+ months validity)',
+      'DS-160 confirmation page',
+      'Visa fee payment receipt',
+      'Passport-size photograph (US specs: 2×2 inch, white background)',
+      'Employment / business proof',
+      'Bank statements (last 6 months)',
+      'ITR copies (last 3 years)',
+      'Travel itinerary / invitation letter',
+    ],
   },
   {
     id: 'train-tickets',
@@ -185,7 +334,14 @@ export const SERVICES: Service[] = [
     priceLabel: '₹100',
     iconName: 'HiTicket',
     category: 'Online Services',
-    description: 'IRCTC Train ticket booking assistance — Tatkal, general, and premium bookings. Confirmation guaranteed support.'
+    description: 'IRCTC Train ticket booking assistance — Tatkal, general, and premium bookings. Confirmation guaranteed support.',
+    requirements: [
+      'Passenger name(s) and age(s)',
+      'Travel date and preferred train',
+      'Source and destination stations',
+      'ID proof number (Aadhaar / PAN)',
+      'Mobile number for ticket updates',
+    ],
   },
   {
     id: 'flight-bookings',
@@ -194,7 +350,14 @@ export const SERVICES: Service[] = [
     priceLabel: '₹500',
     iconName: 'HiPaperAirplane',
     category: 'Online Services',
-    description: 'Domestic and international flight ticket booking assistance. Best fare search and cancellation/rescheduling help.'
+    description: 'Domestic and international flight ticket booking assistance. Best fare search and cancellation/rescheduling help.',
+    requirements: [
+      'Passenger name(s) as per ID',
+      'Travel dates and preferred airlines',
+      'Source and destination airports',
+      'Passport details (for international)',
+      'Mobile number and email',
+    ],
   },
   {
     id: 'insurance-services',
@@ -203,7 +366,16 @@ export const SERVICES: Service[] = [
     priceLabel: '₹299',
     iconName: 'HiShieldCheck',
     category: 'Online Services',
-    description: 'Life, health, and vehicle insurance policy assistance. New policy registration, renewals, and claim support.'
+    description: 'Life, health, and vehicle insurance policy assistance. New policy registration, renewals, and claim support.',
+    requirements: [
+      'Aadhaar Card & PAN Card',
+      'Age proof',
+      'Address proof',
+      'Passport-size photograph',
+      'Bank account details',
+      'Vehicle RC book (for vehicle insurance)',
+      'Previous policy details (for renewal)',
+    ],
   },
   {
     id: 'loan-services',
@@ -212,7 +384,17 @@ export const SERVICES: Service[] = [
     priceLabel: '₹499',
     iconName: 'HiBanknotes',
     category: 'Online Services',
-    description: 'Personal, business, home, and vehicle loan application assistance. Documentation and bank coordination support.'
+    description: 'Personal, business, home, and vehicle loan application assistance. Documentation and bank coordination support.',
+    requirements: [
+      'Aadhaar Card & PAN Card',
+      'Income proof (Salary slips / ITR)',
+      'Bank statements (last 6 months)',
+      'Address proof',
+      'Employment / business proof',
+      'Property documents (for home loan)',
+      'Vehicle quotation (for vehicle loan)',
+      'Passport-size photographs',
+    ],
   },
   {
     id: 'pf-withdrawal',
@@ -221,7 +403,15 @@ export const SERVICES: Service[] = [
     priceLabel: '₹500',
     iconName: 'HiCurrencyRupee',
     category: 'Online Services',
-    description: 'Provident Fund (PF) claim and withdrawal assistance. UAN activation, KYC update, and online claim filing.'
+    description: 'Provident Fund (PF) claim and withdrawal assistance. UAN activation, KYC update, and online claim filing.',
+    requirements: [
+      'UAN (Universal Account Number)',
+      'Aadhaar Card (linked to UAN)',
+      'PAN Card',
+      'Bank account details (linked to UAN)',
+      'Previous employer details',
+      'Cancelled cheque / bank passbook',
+    ],
   },
   {
     id: 'pmegp',
@@ -230,7 +420,17 @@ export const SERVICES: Service[] = [
     priceLabel: '₹6,999',
     iconName: 'HiBuildingOffice2',
     category: 'Online Services',
-    description: 'Prime Minister Employment Generation Programme (PMEGP) loan application. Project report preparation and bank linkage.'
+    description: 'Prime Minister Employment Generation Programme (PMEGP) loan application. Project report preparation and bank linkage.',
+    requirements: [
+      'Aadhaar Card & PAN Card',
+      'Caste certificate (for SC/ST/OBC/Minority)',
+      'Educational qualification certificates',
+      'Project report / business plan',
+      'Passport-size photographs',
+      'Bank account details',
+      'Address proof of proposed unit',
+      'EDP training certificate (if available)',
+    ],
   },
   {
     id: 'kalyana-lakshmi',
@@ -239,7 +439,17 @@ export const SERVICES: Service[] = [
     priceLabel: '₹500',
     iconName: 'HiDocumentCheck',
     category: 'Online Services',
-    description: 'Kalyana Lakshmi / Shaadi Mubarak scheme application assistance. Complete documentation and follow-up support.'
+    description: 'Kalyana Lakshmi / Shaadi Mubarak scheme application assistance. Complete documentation and follow-up support.',
+    requirements: [
+      'Aadhaar Card of bride',
+      'Aadhaar Card of mother / guardian',
+      'Ration Card / Income certificate',
+      'Caste certificate',
+      'Age proof of bride (must be 18+)',
+      'Bank account details (bride\'s account)',
+      'Marriage invitation card / wedding photo',
+      'SSC / birth certificate for age verification',
+    ],
   },
   {
     id: 'ttd-seva-bookings',
@@ -248,7 +458,14 @@ export const SERVICES: Service[] = [
     priceLabel: '₹150',
     iconName: 'HiStar',
     category: 'Online Services',
-    description: 'Tirumala Tirupati Devasthanams (TTD) Seva, Darshan, and accommodation bookings. Quick slot confirmation.'
+    description: 'Tirumala Tirupati Devasthanams (TTD) Seva, Darshan, and accommodation bookings. Quick slot confirmation.',
+    requirements: [
+      'Aadhaar Card of all pilgrims',
+      'Mobile number for OTP verification',
+      'Preferred date of darshan / seva',
+      'Number of pilgrims',
+      'ID proof for accommodation booking',
+    ],
   },
   {
     id: 'scholarship-services',
@@ -257,7 +474,16 @@ export const SERVICES: Service[] = [
     priceLabel: '₹200',
     iconName: 'HiAcademicCap',
     category: 'Online Services',
-    description: 'State and national scholarship application assistance — Pre-Matric, Post-Matric, and merit-based scholarships.'
+    description: 'State and national scholarship application assistance — Pre-Matric, Post-Matric, and merit-based scholarships.',
+    requirements: [
+      'Aadhaar Card of student',
+      'Caste / Income certificate',
+      'Previous year marksheet',
+      'College / school admission letter / bonafide',
+      'Bank account details (student\'s account)',
+      'Passport-size photograph',
+      'Fee receipt / tuition fee structure',
+    ],
   },
   {
     id: 'online-applications',
@@ -266,7 +492,14 @@ export const SERVICES: Service[] = [
     priceLabel: 'Custom',
     iconName: 'HiComputerDesktop',
     category: 'Online Services',
-    description: 'General online form filling and application submission for any government or private portal. Job applications, exam registrations, and more.'
+    description: 'General online form filling and application submission for any government or private portal. Job applications, exam registrations, and more.',
+    requirements: [
+      'Aadhaar Card',
+      'Passport-size photograph (digital)',
+      'Educational certificates as required',
+      'Signature scan (digital)',
+      'Application-specific documents',
+    ],
   },
 
   // ═══════════════════════════════════════════
@@ -279,7 +512,12 @@ export const SERVICES: Service[] = [
     priceLabel: '₹100',
     iconName: 'HiCreditCard',
     category: 'Printing',
-    description: 'High-quality PVC card printing — ID cards, Aadhaar, PAN, business cards, and employee ID cards.'
+    description: 'High-quality PVC card printing — ID cards, Aadhaar, PAN, business cards, and employee ID cards.',
+    requirements: [
+      'Soft copy of the card content / design',
+      'Photograph (high resolution)',
+      'Details to print (Name, ID number, etc.)',
+    ],
   },
   {
     id: 'photo-frames',
@@ -288,7 +526,13 @@ export const SERVICES: Service[] = [
     priceLabel: 'Custom',
     iconName: 'HiPhoto',
     category: 'Printing',
-    description: 'Custom photo frames in various sizes — wall frames, desk frames, collage frames. Premium finish printing.'
+    description: 'Custom photo frames in various sizes — wall frames, desk frames, collage frames. Premium finish printing.',
+    requirements: [
+      'High-resolution photographs (digital or physical)',
+      'Preferred frame size',
+      'Frame type (wall / desk / collage)',
+      'Quantity required',
+    ],
   },
   {
     id: 't-shirts-printing',
@@ -297,7 +541,14 @@ export const SERVICES: Service[] = [
     priceLabel: 'Custom',
     iconName: 'HiPrinter',
     category: 'Printing',
-    description: 'Custom T-shirt printing with your designs, logos, or photos. Bulk orders available for events and businesses.'
+    description: 'Custom T-shirt printing with your designs, logos, or photos. Bulk orders available for events and businesses.',
+    requirements: [
+      'Design / logo / image file (high resolution)',
+      'T-shirt color preference',
+      'Size(s) required (S / M / L / XL / XXL)',
+      'Quantity',
+      'Placement (front / back / both)',
+    ],
   },
   {
     id: 'fridge-magnets',
@@ -306,7 +557,13 @@ export const SERVICES: Service[] = [
     priceLabel: 'Custom',
     iconName: 'HiRectangleGroup',
     category: 'Printing',
-    description: 'Custom fridge magnets with your photos, logos, or designs. Perfect for gifts, souvenirs, and branding.'
+    description: 'Custom fridge magnets with your photos, logos, or designs. Perfect for gifts, souvenirs, and branding.',
+    requirements: [
+      'Photo / design file (high resolution)',
+      'Preferred shape (round / square / custom)',
+      'Size preference',
+      'Quantity required',
+    ],
   },
   {
     id: 'dvd-pendrive-transfer',
@@ -315,7 +572,12 @@ export const SERVICES: Service[] = [
     priceLabel: 'Custom',
     iconName: 'HiFilm',
     category: 'Printing',
-    description: 'Transfer data from DVDs, CDs to Pen Drive or digital format. Photo, video, and document conversions available.'
+    description: 'Transfer data from DVDs, CDs to Pen Drive or digital format. Photo, video, and document conversions available.',
+    requirements: [
+      'DVDs / CDs to be transferred',
+      'Pen Drive (customer-provided or available at shop)',
+      'Preferred output format (if specific)',
+    ],
   },
 
   // ═══════════════════════════════════════════
@@ -328,7 +590,17 @@ export const SERVICES: Service[] = [
     priceLabel: 'Custom',
     iconName: 'HiDocumentText',
     category: 'Registration Services',
-    description: 'Property Sale Deed drafting and registration. Complete stamp duty calculation, documentation, and SRO coordination.'
+    description: 'Property Sale Deed drafting and registration. Complete stamp duty calculation, documentation, and SRO coordination.',
+    requirements: [
+      'Aadhaar Cards of buyer & seller',
+      'PAN Cards of buyer & seller',
+      'Passport-size photos of both parties',
+      'Original property documents (previous deed)',
+      'Encumbrance Certificate (EC)',
+      'Market value / guideline value details',
+      'Pattadar Passbook (for agricultural land)',
+      'Two witnesses with Aadhaar Cards',
+    ],
   },
   {
     id: 'gift-deed',
@@ -337,7 +609,16 @@ export const SERVICES: Service[] = [
     priceLabel: 'Custom',
     iconName: 'HiDocumentText',
     category: 'Registration Services',
-    description: 'Property Gift Deed registration services. Legal drafting, valuation assistance, and sub-registrar office filing.'
+    description: 'Property Gift Deed registration services. Legal drafting, valuation assistance, and sub-registrar office filing.',
+    requirements: [
+      'Aadhaar Cards of donor & donee',
+      'PAN Cards of both parties',
+      'Original property documents',
+      'Encumbrance Certificate (EC)',
+      'Relationship proof between donor & donee',
+      'Passport-size photographs',
+      'Two witnesses with Aadhaar Cards',
+    ],
   },
   {
     id: 'partition-deed',
@@ -346,7 +627,17 @@ export const SERVICES: Service[] = [
     priceLabel: 'Custom',
     iconName: 'HiDocumentText',
     category: 'Registration Services',
-    description: 'Property Partition Deed registration for joint property division. Legal documentation and family settlement support.'
+    description: 'Property Partition Deed registration for joint property division. Legal documentation and family settlement support.',
+    requirements: [
+      'Aadhaar Cards of all parties',
+      'PAN Cards of all parties',
+      'Original property documents',
+      'Encumbrance Certificate (EC)',
+      'Family tree / relationship details',
+      'Survey number & land extent details',
+      'Passport-size photographs of all parties',
+      'Two witnesses with Aadhaar Cards',
+    ],
   },
   {
     id: 'family-release',
@@ -355,7 +646,16 @@ export const SERVICES: Service[] = [
     priceLabel: 'Custom',
     iconName: 'HiUserGroup',
     category: 'Registration Services',
-    description: 'Family Release Deed registration — release of rights by family members on property. Full legal drafting and SRO filing.'
+    description: 'Family Release Deed registration — release of rights by family members on property. Full legal drafting and SRO filing.',
+    requirements: [
+      'Aadhaar Cards of all family members involved',
+      'PAN Cards of all parties',
+      'Original property documents',
+      'Encumbrance Certificate (EC)',
+      'Family tree / legal heir certificate',
+      'Passport-size photographs',
+      'Two witnesses with Aadhaar Cards',
+    ],
   },
   {
     id: 'mortgage',
@@ -364,7 +664,16 @@ export const SERVICES: Service[] = [
     priceLabel: 'Custom',
     iconName: 'HiHome',
     category: 'Registration Services',
-    description: 'Property Mortgage registration services. Documentation for bank mortgage, equitable mortgage, and mortgage release.'
+    description: 'Property Mortgage registration services. Documentation for bank mortgage, equitable mortgage, and mortgage release.',
+    requirements: [
+      'Aadhaar Card & PAN Card of property owner',
+      'Original property documents',
+      'Encumbrance Certificate (EC)',
+      'Bank loan sanction letter',
+      'Property valuation report',
+      'Passport-size photograph',
+      'Two witnesses with Aadhaar Cards',
+    ],
   },
   {
     id: 'bank-release',
@@ -373,7 +682,16 @@ export const SERVICES: Service[] = [
     priceLabel: 'Custom',
     iconName: 'HiBanknotes',
     category: 'Registration Services',
-    description: 'Bank Release / Mortgage Release deed registration. Complete assistance with NOC from bank and SRO filing.'
+    description: 'Bank Release / Mortgage Release deed registration. Complete assistance with NOC from bank and SRO filing.',
+    requirements: [
+      'Aadhaar Card & PAN Card of property owner',
+      'NOC (No Objection Certificate) from the bank',
+      'Original property documents',
+      'Mortgage deed copy',
+      'Loan closure certificate from bank',
+      'Passport-size photograph',
+      'Two witnesses with Aadhaar Cards',
+    ],
   },
   {
     id: 'da-cum-gpa',
@@ -382,7 +700,16 @@ export const SERVICES: Service[] = [
     priceLabel: 'Custom',
     iconName: 'HiScale',
     category: 'Registration Services',
-    description: 'Development Agreement cum General Power of Attorney registration. Builder-landowner agreement documentation and filing.'
+    description: 'Development Agreement cum General Power of Attorney registration. Builder-landowner agreement documentation and filing.',
+    requirements: [
+      'Aadhaar Cards & PAN Cards of landowner & developer',
+      'Original property / land documents',
+      'Encumbrance Certificate (EC)',
+      'Approved building plan (if available)',
+      'Development agreement terms (sharing ratio, etc.)',
+      'Passport-size photographs of both parties',
+      'Two witnesses with Aadhaar Cards',
+    ],
   },
   {
     id: 'gpa',
@@ -391,7 +718,15 @@ export const SERVICES: Service[] = [
     priceLabel: 'Custom',
     iconName: 'HiKey',
     category: 'Registration Services',
-    description: 'General Power of Attorney drafting and registration. Authorized representation for property and legal matters.'
+    description: 'General Power of Attorney drafting and registration. Authorized representation for property and legal matters.',
+    requirements: [
+      'Aadhaar Card & PAN Card of the principal (person giving power)',
+      'Aadhaar Card & PAN Card of the agent (person receiving power)',
+      'Property documents (if property-related GPA)',
+      'Details of powers to be granted',
+      'Passport-size photographs of both parties',
+      'Two witnesses with Aadhaar Cards',
+    ],
   },
   {
     id: 'agreement-of-sale',
@@ -400,7 +735,15 @@ export const SERVICES: Service[] = [
     priceLabel: 'Custom',
     iconName: 'HiClipboardDocumentCheck',
     category: 'Registration Services',
-    description: 'Agreement of Sale (AOS) drafting and registration. Pre-sale legal documentation with terms, conditions, and advance receipt.'
+    description: 'Agreement of Sale (AOS) drafting and registration. Pre-sale legal documentation with terms, conditions, and advance receipt.',
+    requirements: [
+      'Aadhaar Cards & PAN Cards of buyer & seller',
+      'Property documents / title deed',
+      'Encumbrance Certificate (EC)',
+      'Sale terms (price, advance amount, timelines)',
+      'Passport-size photographs of both parties',
+      'Two witnesses with Aadhaar Cards',
+    ],
   },
   {
     id: 'lease-rental-agreement',
@@ -409,7 +752,15 @@ export const SERVICES: Service[] = [
     priceLabel: 'Custom',
     iconName: 'HiDocumentText',
     category: 'Registration Services',
-    description: 'Lease and Rental Agreement drafting, notarization, and registration. Residential and commercial property agreements.'
+    description: 'Lease and Rental Agreement drafting, notarization, and registration. Residential and commercial property agreements.',
+    requirements: [
+      'Aadhaar Cards of landlord & tenant',
+      'Property ownership proof / previous agreement',
+      'Rent amount & security deposit details',
+      'Lease duration & terms',
+      'Passport-size photographs of both parties',
+      'Two witnesses with Aadhaar Cards',
+    ],
   },
   {
     id: 'single-search',
@@ -418,7 +769,13 @@ export const SERVICES: Service[] = [
     priceLabel: 'Custom',
     iconName: 'HiMagnifyingGlass',
     category: 'Registration Services',
-    description: 'Single Search report from Sub-Registrar Office. Verify property ownership history and transaction records.'
+    description: 'Single Search report from Sub-Registrar Office. Verify property ownership history and transaction records.',
+    requirements: [
+      'Document number / year of registration',
+      'Sub-Registrar Office (SRO) jurisdiction',
+      'Property details (survey number, location)',
+      'Names of parties involved (if known)',
+    ],
   },
   {
     id: 'certified-copy',
@@ -427,7 +784,13 @@ export const SERVICES: Service[] = [
     priceLabel: 'Custom',
     iconName: 'HiDocumentCheck',
     category: 'Registration Services',
-    description: 'Obtain Certified Copies (CC) of registered documents from the Sub-Registrar Office. Quick application and collection.'
+    description: 'Obtain Certified Copies (CC) of registered documents from the Sub-Registrar Office. Quick application and collection.',
+    requirements: [
+      'Document number & year of registration',
+      'Sub-Registrar Office (SRO) name',
+      'Applicant\'s Aadhaar Card',
+      'Purpose of obtaining CC',
+    ],
   },
   {
     id: 'market-value',
@@ -436,7 +799,13 @@ export const SERVICES: Service[] = [
     priceLabel: 'Custom',
     iconName: 'HiCurrencyRupee',
     category: 'Registration Services',
-    description: 'Government Market Value / Guideline Value enquiry for properties. Calculate stamp duty and registration charges.'
+    description: 'Government Market Value / Guideline Value enquiry for properties. Calculate stamp duty and registration charges.',
+    requirements: [
+      'Property location / address',
+      'Survey number / plot number',
+      'Property type (residential / commercial / agricultural)',
+      'Extent of the property (sq. yards / acres)',
+    ],
   },
   {
     id: 'encumbrance-certificate',
@@ -445,7 +814,14 @@ export const SERVICES: Service[] = [
     priceLabel: 'Custom',
     iconName: 'HiMagnifyingGlass',
     category: 'Registration Services',
-    description: 'Encumbrance Certificate (EC) application and procurement. Verify property is free from legal dues and mortgages.'
+    description: 'Encumbrance Certificate (EC) application and procurement. Verify property is free from legal dues and mortgages.',
+    requirements: [
+      'Property document number & year',
+      'Sub-Registrar Office (SRO) jurisdiction',
+      'Property owner name',
+      'Period for which EC is required',
+      'Survey number & property address',
+    ],
   },
   {
     id: 'society-firm-registration',
@@ -454,7 +830,16 @@ export const SERVICES: Service[] = [
     priceLabel: 'Custom',
     iconName: 'HiBuildingOffice2',
     category: 'Registration Services',
-    description: 'Society and Partnership Firm registration. MOA/AOA drafting, bylaws preparation, and Registrar of Firms filing.'
+    description: 'Society and Partnership Firm registration. MOA/AOA drafting, bylaws preparation, and Registrar of Firms filing.',
+    requirements: [
+      'Aadhaar Cards & PAN Cards of all partners / members',
+      'Passport-size photographs of all partners',
+      'Partnership Deed / MOA / AOA draft',
+      'Registered office address proof',
+      'Objectives / aims of the society or firm',
+      'Minimum 7 members (for Society)',
+      'Two witnesses with Aadhaar Cards',
+    ],
   },
 
   // ═══════════════════════════════════════════
@@ -467,7 +852,14 @@ export const SERVICES: Service[] = [
     priceLabel: 'Custom',
     iconName: 'HiMap',
     category: 'Bhu Bharati Services',
-    description: 'ROR / 1B record correction services on Bhu Bharati Portal. Name, extent, and survey number corrections.'
+    description: 'ROR / 1B record correction services on Bhu Bharati Portal. Name, extent, and survey number corrections.',
+    requirements: [
+      'Pattadar Passbook',
+      'Aadhaar Card of the Pattadar',
+      'Existing ROR / 1B document',
+      'Supporting documents for correction',
+      'Survey number & village details',
+    ],
   },
   {
     id: 'land-slots',
@@ -476,7 +868,14 @@ export const SERVICES: Service[] = [
     priceLabel: 'Custom',
     iconName: 'HiMap',
     category: 'Bhu Bharati Services',
-    description: 'Agriculture Land Slots Booking on Bhu Bharati Portal. Online slot reservation for land registration appointments.'
+    description: 'Agriculture Land Slots Booking on Bhu Bharati Portal. Online slot reservation for land registration appointments.',
+    requirements: [
+      'Aadhaar Card of both buyer & seller',
+      'Pattadar Passbook',
+      'Survey number & land extent',
+      'Village, Mandal & District details',
+      'Mobile number linked to Aadhaar',
+    ],
   },
   {
     id: 'pattadar-name-correction',
@@ -485,7 +884,13 @@ export const SERVICES: Service[] = [
     priceLabel: 'Custom',
     iconName: 'HiClipboardDocumentList',
     category: 'Bhu Bharati Services',
-    description: 'Pattadar Passbook name correction on Bhu Bharati Portal. Update Pattadar details as per government records.'
+    description: 'Pattadar Passbook name correction on Bhu Bharati Portal. Update Pattadar details as per government records.',
+    requirements: [
+      'Existing Pattadar Passbook',
+      'Aadhaar Card (with correct name)',
+      'Survey number details',
+      'Supporting name proof (Gazette notification / Court order)',
+    ],
   },
   {
     id: 'land-details-search',
@@ -494,7 +899,13 @@ export const SERVICES: Service[] = [
     priceLabel: 'Custom',
     iconName: 'HiMagnifyingGlass',
     category: 'Bhu Bharati Services',
-    description: 'Land Details Search on Bhu Bharati Portal — survey number lookup, ownership verification, and extent details.'
+    description: 'Land Details Search on Bhu Bharati Portal — survey number lookup, ownership verification, and extent details.',
+    requirements: [
+      'Survey number',
+      'Village name',
+      'Mandal & District name',
+      'Pattadar name (if known)',
+    ],
   },
   {
     id: 'passbook-data-correction',
@@ -503,7 +914,14 @@ export const SERVICES: Service[] = [
     priceLabel: 'Custom',
     iconName: 'HiDocumentCheck',
     category: 'Bhu Bharati Services',
-    description: 'Pattadar Passbook data correction on Bhu Bharati — update extent, survey number, village name, and other land records.'
+    description: 'Pattadar Passbook data correction on Bhu Bharati — update extent, survey number, village name, and other land records.',
+    requirements: [
+      'Existing Pattadar Passbook',
+      'Aadhaar Card of the Pattadar',
+      'Supporting documents for correction',
+      'Survey number & village details',
+      'Mobile number linked to Aadhaar',
+    ],
   },
 ];
 

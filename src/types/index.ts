@@ -7,6 +7,7 @@ export interface Service {
   category: 'Licences' | 'Documents' | 'Printing' | 'Online Services' | 'Registration Services' | 'Bhu Bharati Services';
   description: string;
   imageUrl?: string; // High-resolution flyer or menu image reference
+  requirements?: string[]; // Documents / items required from customer
 }
 
 export interface CartItem {
