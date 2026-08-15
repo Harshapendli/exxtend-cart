@@ -1,0 +1,6 @@
+{
+  "name": "EXTEND KART",
+  "description": "Warangal's premier full-service business hub for professional digital printing, document drafting, state/central government licensing, and compliance with integrated secure payment systems.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
