@@ -2,10 +2,11 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { TESTIMONIALS } from '../lib/services-data';
 import { HiStar, HiChevronLeft, HiChevronRight, HiMiniChatBubbleLeftRight } from 'react-icons/hi2';
+import { WordReveal } from './AnimatedText';
 
 export default function TestimonialsCarousel() {
   const [current, setCurrent] = useState(0);
-  const [direction, setDirection] = useState(0); // -1 for left, 1 for right
+  const [direction, setDirection] = useState(0);
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -27,43 +28,79 @@ export default function TestimonialsCarousel() {
 
   const slideVariants = {
     enter: (dir: number) => ({
-      x: dir > 0 ? 50 : -50,
+      x: dir > 0 ? 80 : -80,
       opacity: 0,
+      scale: 0.95,
     }),
     center: {
       x: 0,
       opacity: 1,
+      scale: 1,
       transition: {
         x: { type: 'spring', stiffness: 350, damping: 30 },
         opacity: { duration: 0.35 },
+        scale: { duration: 0.35 },
       },
     },
     exit: (dir: number) => ({
-      x: dir < 0 ? 50 : -50,
+      x: dir < 0 ? 80 : -80,
       opacity: 0,
+      scale: 0.95,
       transition: {
         x: { type: 'spring', stiffness: 350, damping: 30 },
         opacity: { duration: 0.35 },
+        scale: { duration: 0.35 },
       },
     }),
   };
 
   return (
-    <section className="py-24 bg-gray-50/50 border-t border-b border-gray-100" id="testimonials">
-      <div className="max-w-4xl mx-auto px-6">
+    <section className="py-24 bg-gray-50/50 border-t border-b border-gray-100 relative overflow-hidden" id="testimonials">
+      {/* Decorative */}
+      <div className="absolute -left-20 top-20 w-60 h-60 bg-amber-500/5 rounded-full blur-[80px]" />
+      <div className="absolute -right-20 bottom-20 w-60 h-60 bg-brand/5 rounded-full blur-[80px]" />
+
+      <div className="max-w-4xl mx-auto px-6 relative z-10">
         {/* Header */}
         <div className="text-center mb-16 space-y-4">
-          <span className="section-label">Testimonials</span>
-          <h2 className="text-3xl font-black font-display text-gray-950">
-            What Our Customers Say
-          </h2>
+          <motion.span
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            className="section-label inline-block"
+          >
+            Testimonials
+          </motion.span>
+          <WordReveal
+            text="What Our Customers Say"
+            className="text-3xl font-black font-display text-gray-950"
+            tag="h2"
+          />
         </div>
 
         {/* Testimonial Box */}
-        <div className="relative bg-white border border-gray-100 rounded-3xl p-8 md:p-12 shadow-soft min-h-[250px] flex flex-col justify-between overflow-hidden">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="relative bg-white border border-gray-100 rounded-3xl p-8 md:p-12 shadow-soft min-h-[250px] flex flex-col justify-between overflow-hidden"
+        >
           {/* Quote Graphic Icon */}
-          <div className="absolute right-8 top-8 opacity-[0.05] text-brand">
-            <HiMiniChatBubbleLeftRight className="h-28 w-28" />
+          <div className="absolute right-8 top-8 opacity-[0.04] text-brand">
+            <HiMiniChatBubbleLeftRight className="h-32 w-32" />
+          </div>
+
+          {/* Progress dots */}
+          <div className="absolute top-6 left-8 flex gap-1.5">
+            {TESTIMONIALS.map((_, idx) => (
+              <motion.div
+                key={idx}
+                className={`h-1 rounded-full transition-all duration-300 ${
+                  idx === current ? 'w-6 bg-brand' : 'w-1.5 bg-gray-200'
+                }`}
+                layout
+              />
+            ))}
           </div>
 
           <AnimatePresence mode="wait" initial={false} custom={direction}>
@@ -74,12 +111,19 @@ export default function TestimonialsCarousel() {
               initial="enter"
               animate="center"
               exit="exit"
-              className="space-y-6 select-none relative z-10"
+              className="space-y-6 select-none relative z-10 pt-4"
             >
-              {/* Star Rating */}
+              {/* Star Rating with stagger */}
               <div className="flex gap-1">
                 {Array.from({ length: TESTIMONIALS[current].rating }).map((_, i) => (
-                  <HiStar key={i} className="h-5 w-5 text-amber-400 fill-amber-400" />
+                  <motion.div
+                    key={i}
+                    initial={{ opacity: 0, scale: 0, rotate: -30 }}
+                    animate={{ opacity: 1, scale: 1, rotate: 0 }}
+                    transition={{ delay: i * 0.08, type: 'spring', stiffness: 400 }}
+                  >
+                    <HiStar className="h-5 w-5 text-amber-400 fill-amber-400" />
+                  </motion.div>
                 ))}
               </div>
 
@@ -90,14 +134,20 @@ export default function TestimonialsCarousel() {
 
               {/* Author */}
               <div className="flex items-center gap-3 pt-2">
-                <div className="w-10 h-10 rounded-full bg-brand-50 flex items-center justify-center font-bold text-brand uppercase text-sm font-mono">
+                <motion.div
+                  initial={{ scale: 0 }}
+                  animate={{ scale: 1 }}
+                  transition={{ type: 'spring', stiffness: 500, delay: 0.2 }}
+                  className="w-12 h-12 rounded-full bg-gradient-to-br from-brand to-brand-light flex items-center justify-center font-bold text-white uppercase text-sm font-mono shadow-md"
+                >
                   {TESTIMONIALS[current].name.substring(0, 2)}
-                </div>
+                </motion.div>
                 <div>
                   <h4 className="font-bold text-gray-950 text-sm font-display leading-tight">
                     {TESTIMONIALS[current].name}
                   </h4>
-                  <span className="text-xs text-gray-400">
+                  <span className="text-xs text-gray-400 flex items-center gap-1">
+                    <span className="w-1.5 h-1.5 rounded-full bg-green-400" />
                     {TESTIMONIALS[current].source}
                   </span>
                 </div>
@@ -107,20 +157,24 @@ export default function TestimonialsCarousel() {
 
           {/* Nav Buttons */}
           <div className="flex justify-end gap-3 mt-8 relative z-10">
-            <button
+            <motion.button
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.95 }}
               onClick={handlePrev}
-              className="p-2.5 rounded-xl border border-gray-100 hover:border-gray-200 text-gray-500 hover:text-brand hover:bg-gray-50 transition-colors cursor-pointer"
+              className="p-3 rounded-xl border border-gray-100 hover:border-brand/30 text-gray-500 hover:text-brand hover:bg-brand-50 transition-all cursor-pointer"
             >
               <HiChevronLeft className="h-5 w-5" />
-            </button>
-            <button
+            </motion.button>
+            <motion.button
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.95 }}
               onClick={handleNext}
-              className="p-2.5 rounded-xl border border-gray-100 hover:border-gray-200 text-gray-500 hover:text-brand hover:bg-gray-50 transition-colors cursor-pointer"
+              className="p-3 rounded-xl border border-gray-100 hover:border-brand/30 text-gray-500 hover:text-brand hover:bg-brand-50 transition-all cursor-pointer"
             >
               <HiChevronRight className="h-5 w-5" />
-            </button>
+            </motion.button>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
