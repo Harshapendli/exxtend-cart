@@ -67,14 +67,14 @@ export default async function handler(req: any, res: any) {
     if (!razorpayResponse.ok) {
       let errorMsg = 'Razorpay order creation failed';
       try {
-        const errorData = await razorpayResponse.json();
+        const errorData: any = await razorpayResponse.json();
         errorMsg = errorData.error?.description || errorMsg;
       } catch {}
       console.error('Razorpay API error:', errorMsg);
       throw new Error(errorMsg);
     }
 
-    const orderData = await razorpayResponse.json();
+    const orderData: any = await razorpayResponse.json();
     console.log('Razorpay order created:', orderData.id, '- Amount:', orderAmount);
 
     return res.status(200).json({
