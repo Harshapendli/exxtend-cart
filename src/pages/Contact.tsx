@@ -202,6 +202,56 @@ export default function Contact() {
         </div>
       </section>
 
+      {/* Meet Our Team */}
+      <section className="py-20 bg-gray-50 border-t border-gray-100">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-14 space-y-3">
+            <span className="section-label">The People Behind Your Services</span>
+            <h2 className="text-3xl md:text-4xl font-black font-display text-gray-950">
+              Meet Our Team
+            </h2>
+            <p className="text-sm text-gray-500 max-w-xl mx-auto font-sans">
+              Our dedicated professionals ensure every registration and document is handled with precision and care.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6 md:gap-8">
+            {[
+              { name: 'Ponnala Vasundara', role: 'Senior Executive', img: '/staff/vasundara.jpg' },
+              { name: 'Pendli Raghupathi', role: 'Operations Lead', img: '/staff/raghupathi.jpg' },
+              { name: 'Karampuri Vinay', role: 'Registration Specialist', img: '/staff/karampuri-vinay.jpg' },
+              { name: 'Jannu Raghuram', role: 'Documentation Head', img: '/staff/raghuram.jpg' },
+              { name: 'Thippani Vinay', role: 'Client Relations', img: '/staff/thippani-vinay.jpg' },
+            ].map((member, i) => (
+              <motion.div
+                key={member.name}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: i * 0.1 }}
+                className="group text-center"
+              >
+                <div className="relative w-28 h-28 sm:w-32 sm:h-32 mx-auto mb-4 rounded-2xl overflow-hidden border-2 border-gray-100 group-hover:border-brand/30 transition-all duration-300 shadow-soft group-hover:shadow-glow">
+                  <img
+                    src={member.img}
+                    alt={member.name}
+                    className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                    loading="lazy"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-brand/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                </div>
+                <h4 className="text-sm font-bold font-display text-gray-900 group-hover:text-brand transition-colors">
+                  {member.name}
+                </h4>
+                <p className="text-[11px] text-gray-400 font-medium mt-0.5 uppercase tracking-wider">
+                  {member.role}
+                </p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* WhatsApp CTA card below form */}
       <section className="py-12 bg-gray-50/50 border-t border-gray-100">
         <div className="max-w-3xl mx-auto px-6 text-center space-y-4">
