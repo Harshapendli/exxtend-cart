@@ -43,17 +43,46 @@ export default function CartSheet({ onSuccessRedirect }: CartSheetProps) {
 
   const handleProceedToDocuments = (e: React.FormEvent) => {
     e.preventDefault();
-    if (!customer.name || !customer.phone) {
+    if (!customer.name.trim() || !customer.phone.trim()) {
       toast.error('Please enter your name and phone number to continue.');
       return;
     }
+    // Validate phone number (Indian: 10 digits, optionally with +91 prefix)
+    const cleanPhone = customer.phone.replace(/[\s\-+]/g, '');
+    const phoneRegex = /^(91)?[6-9]\d{9}$/;
+    if (!phoneRegex.test(cleanPhone)) {
+      toast.error('Please enter a valid 10-digit Indian phone number.');
+      return;
+    }
+    // Sanitize name — strip any HTML tags
+    const sanitizedName = customer.name.replace(/<[^>]*>/g, '').trim();
+    setCustomer({ ...customer, name: sanitizedName });
     setCheckoutStep('documents');
   };
+
+  const MAX_FILE_SIZE = 10 * 1024 * 1024; // 10MB
+  const ALLOWED_TYPES = ['application/pdf', 'image/jpeg', 'image/png', 'image/jpg', 'image/webp'];
 
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.files) {
       const newFiles = Array.from(e.target.files);
-      setFiles((prev) => [...prev, ...newFiles]);
+      const validFiles: File[] = [];
+
+      for (const file of newFiles) {
+        if (file.size > MAX_FILE_SIZE) {
+          toast.error(`"${file.name}" exceeds 10MB limit.`);
+          continue;
+        }
+        if (!ALLOWED_TYPES.includes(file.type)) {
+          toast.error(`"${file.name}" is not a supported format. Use PDF, JPG, or PNG.`);
+          continue;
+        }
+        validFiles.push(file);
+      }
+
+      if (validFiles.length > 0) {
+        setFiles((prev) => [...prev, ...validFiles]);
+      }
     }
   };
 

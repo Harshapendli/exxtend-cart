@@ -106,7 +106,7 @@ export async function checkoutWithRazorpay({
     return new Promise((resolve, reject) => {
       const options: RazorpayOptions = {
         key: data.keyId,
-        // Amount is already in paisa from the server — do NOT multiply again
+        // Amount from server is in rupees — Razorpay expects paisa (×100)
         amount: data.amount * 100,
         currency: 'INR',
         name: 'EXTEND KART',

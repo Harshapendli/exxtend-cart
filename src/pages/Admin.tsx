@@ -23,9 +23,10 @@ import {
 } from 'react-icons/hi2';
 import { toast } from 'react-hot-toast';
 
-// Admin credentials — change these to your own
-const ADMIN_USERNAME = 'admin';
-const ADMIN_PASSWORD = 'Warangal@1';
+// Admin credentials — loaded from environment variables for security
+// Set VITE_ADMIN_USER and VITE_ADMIN_PASS in your .env and Vercel dashboard
+const ADMIN_USERNAME = import.meta.env.VITE_ADMIN_USER || 'admin';
+const ADMIN_PASSWORD = import.meta.env.VITE_ADMIN_PASS || '';
 
 // Session key for localStorage
 const SESSION_KEY = 'ek_admin_session';
@@ -65,21 +66,41 @@ function AdminLogin({ onLogin }: { onLogin: () => void }) {
   const [showPassword, setShowPassword] = useState(false);
   const [error, setError] = useState('');
   const [isLoading, setIsLoading] = useState(false);
+  const [failedAttempts, setFailedAttempts] = useState(0);
+  const [lockoutUntil, setLockoutUntil] = useState(0);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setError('');
+
+    // Rate limiting: lock out after 5 failed attempts for 60 seconds
+    if (lockoutUntil > Date.now()) {
+      const secsLeft = Math.ceil((lockoutUntil - Date.now()) / 1000);
+      setError(`Too many attempts. Please wait ${secsLeft} seconds.`);
+      toast.error(`Account locked. Try again in ${secsLeft}s.`);
+      return;
+    }
+
     setIsLoading(true);
 
     // Simulate a slight delay for realistic feel
     setTimeout(() => {
       if (username === ADMIN_USERNAME && password === ADMIN_PASSWORD) {
+        setFailedAttempts(0);
         createSession();
         toast.success('Welcome back, Admin!');
         onLogin();
       } else {
-        setError('Invalid username or password. Please try again.');
-        toast.error('Login failed — check your credentials.');
+        const attempts = failedAttempts + 1;
+        setFailedAttempts(attempts);
+        if (attempts >= 5) {
+          setLockoutUntil(Date.now() + 60000); // 60 second lockout
+          setError('Too many failed attempts. Account locked for 60 seconds.');
+          toast.error('Account locked for 60 seconds.');
+        } else {
+          setError(`Invalid credentials. ${5 - attempts} attempts remaining.`);
+          toast.error('Login failed — check your credentials.');
+        }
       }
       setIsLoading(false);
     }, 800);
