@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <defs>
+    <linearGradient id="tbg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e3a5f"/>
+      <stop offset="100%" style="stop-color:#2563eb"/>
+    </linearGradient>
+    <linearGradient id="tac" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#f59e0b"/>
+      <stop offset="100%" style="stop-color:#fbbf24"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#tbg)" rx="16"/>
+  <rect x="0" y="0" width="800" height="5" fill="url(#tac)"/>
+  <line x1="0" y1="380" x2="800" y2="380" stroke="rgba(255,255,255,0.1)" stroke-width="3"/>
+  <line x1="0" y1="385" x2="800" y2="385" stroke="rgba(255,255,255,0.1)" stroke-width="3"/>
+  <g fill="rgba(255,255,255,0.06)">
+    <rect x="50" y="375" width="30" height="15" rx="2"/>
+    <rect x="120" y="375" width="30" height="15" rx="2"/>
+    <rect x="190" y="375" width="30" height="15" rx="2"/>
+    <rect x="260" y="375" width="30" height="15" rx="2"/>
+    <rect x="330" y="375" width="30" height="15" rx="2"/>
+    <rect x="400" y="375" width="30" height="15" rx="2"/>
+    <rect x="470" y="375" width="30" height="15" rx="2"/>
+    <rect x="540" y="375" width="30" height="15" rx="2"/>
+    <rect x="610" y="375" width="30" height="15" rx="2"/>
+    <rect x="680" y="375" width="30" height="15" rx="2"/>
+    <rect x="750" y="375" width="30" height="15" rx="2"/>
+  </g>
+  <g transform="translate(480, 280)" fill="rgba(255,255,255,0.08)">
+    <rect x="0" y="20" width="280" height="70" rx="8"/>
+    <rect x="-30" y="0" width="80" height="90" rx="10"/>
+    <rect x="50" y="10" width="50" height="40" rx="4" fill="rgba(255,255,255,0.04)"/>
+    <rect x="110" y="10" width="50" height="40" rx="4" fill="rgba(255,255,255,0.04)"/>
+    <rect x="170" y="10" width="50" height="40" rx="4" fill="rgba(255,255,255,0.04)"/>
+    <circle cx="30" cy="95" r="12" fill="rgba(255,255,255,0.06)"/>
+    <circle cx="100" cy="95" r="12" fill="rgba(255,255,255,0.06)"/>
+    <circle cx="200" cy="95" r="12" fill="rgba(255,255,255,0.06)"/>
+  </g>
+  <rect x="30" y="20" width="180" height="36" fill="rgba(255,255,255,0.1)" rx="8"/>
+  <text x="46" y="44" font-family="Arial, sans-serif" font-size="13" font-weight="800" fill="#60a5fa">EXTEND</text>
+  <text x="108" y="44" font-family="Arial, sans-serif" font-size="13" font-weight="800" fill="#fbbf24"> KART</text>
+  <rect x="30" y="76" width="220" height="32" fill="rgba(255,255,255,0.12)" rx="16" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+  <text x="52" y="97" font-family="Arial, sans-serif" font-size="12" font-weight="700" fill="white" letter-spacing="2">IRCTC TICKET BOOKING</text>
+  <text x="30" y="168" font-family="Arial, sans-serif" font-size="52" font-weight="900" fill="white">TRAIN</text>
+  <text x="30" y="228" font-family="Arial, sans-serif" font-size="52" font-weight="900" fill="white">TICKETS</text>
+  <text x="30" y="265" font-family="Arial, sans-serif" font-size="20" font-weight="400" fill="rgba(255,255,255,0.6)">General | Tatkal | Premium Bookings</text>
+  <rect x="30" y="290" width="180" height="65" fill="rgba(255,255,255,0.1)" rx="12"/>
+  <text x="50" y="316" font-family="Arial, sans-serif" font-size="10" font-weight="600" fill="rgba(255,255,255,0.5)" letter-spacing="1.5">SERVICE CHARGE</text>
+  <text x="50" y="342" font-family="Arial, sans-serif" font-size="28" font-weight="900" fill="#fbbf24">Rs.100</text>
+  <rect x="230" y="290" width="220" height="65" fill="rgba(255,255,255,0.06)" rx="12"/>
+  <text x="250" y="316" font-family="Arial, sans-serif" font-size="10" font-weight="600" fill="rgba(255,255,255,0.5)" letter-spacing="1.5">WE HANDLE</text>
+  <text x="250" y="335" font-family="Arial, sans-serif" font-size="12" fill="rgba(255,255,255,0.8)">* Tatkal Bookings</text>
+  <text x="250" y="350" font-family="Arial, sans-serif" font-size="12" fill="rgba(255,255,255,0.8)">* Confirmation Support</text>
+  <rect x="0" y="400" width="800" height="100" fill="rgba(0,0,0,0.3)"/>
+  <rect x="0" y="400" width="800" height="3" fill="url(#tac)"/>
+  <text x="50" y="435" font-family="Arial, sans-serif" font-size="11" font-weight="600" fill="rgba(255,255,255,0.5)" letter-spacing="1">BOOK NOW</text>
+  <text x="50" y="460" font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="white">Call: 9951119995 | Deshaipet Road, Warangal</text>
+  <rect x="580" y="420" width="190" height="55" fill="rgba(59,130,246,0.2)" rx="10" stroke="#60a5fa" stroke-width="1"/>
+  <text x="612" y="445" font-family="Arial, sans-serif" font-size="11" font-weight="700" fill="#93c5fd">Instant Booking</text>
+  <text x="610" y="463" font-family="Arial, sans-serif" font-size="10" fill="rgba(255,255,255,0.6)">Fast | Reliable | Assured</text>
+</svg>

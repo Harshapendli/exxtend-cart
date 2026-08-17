@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <defs>
+    <linearGradient id="lbg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#581c87"/>
+      <stop offset="100%" style="stop-color:#9333ea"/>
+    </linearGradient>
+    <linearGradient id="lac" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#f97316"/>
+      <stop offset="100%" style="stop-color:#fb923c"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#lbg)" rx="16"/>
+  <rect x="0" y="0" width="800" height="5" fill="url(#lac)"/>
+  <text x="550" y="300" font-family="Arial, sans-serif" font-size="280" font-weight="900" fill="rgba(255,255,255,0.04)">Rs</text>
+  <g transform="translate(620, 120)" fill="rgba(255,255,255,0.06)">
+    <ellipse cx="40" cy="80" rx="40" ry="12"/>
+    <rect x="0" y="68" width="80" height="12" fill="rgba(255,255,255,0.04)"/>
+    <ellipse cx="40" cy="68" rx="40" ry="12"/>
+    <rect x="0" y="56" width="80" height="12" fill="rgba(255,255,255,0.04)"/>
+    <ellipse cx="40" cy="56" rx="40" ry="12"/>
+    <rect x="0" y="44" width="80" height="12" fill="rgba(255,255,255,0.04)"/>
+    <ellipse cx="40" cy="44" rx="40" ry="12"/>
+  </g>
+  <g transform="translate(500, 280)" stroke="rgba(255,255,255,0.08)" stroke-width="4" fill="none">
+    <polyline points="0,80 40,60 80,70 120,30 160,40 200,10"/>
+    <polygon points="200,0 210,15 195,15" fill="rgba(255,255,255,0.08)"/>
+  </g>
+  <rect x="30" y="20" width="180" height="36" fill="rgba(255,255,255,0.1)" rx="8"/>
+  <text x="46" y="44" font-family="Arial, sans-serif" font-size="13" font-weight="800" fill="#c084fc">EXTEND</text>
+  <text x="108" y="44" font-family="Arial, sans-serif" font-size="13" font-weight="800" fill="#fb923c"> KART</text>
+  <rect x="30" y="76" width="270" height="32" fill="rgba(255,255,255,0.12)" rx="16" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+  <text x="52" y="97" font-family="Arial, sans-serif" font-size="12" font-weight="700" fill="white" letter-spacing="2">PERSONAL | BUSINESS | HOME</text>
+  <text x="30" y="168" font-family="Arial, sans-serif" font-size="52" font-weight="900" fill="white">LOAN</text>
+  <text x="30" y="228" font-family="Arial, sans-serif" font-size="52" font-weight="900" fill="white">SERVICES</text>
+  <text x="30" y="265" font-family="Arial, sans-serif" font-size="20" font-weight="400" fill="rgba(255,255,255,0.6)">Quick Approval | Low Interest | Easy EMI</text>
+  <rect x="30" y="290" width="180" height="65" fill="rgba(255,255,255,0.1)" rx="12"/>
+  <text x="50" y="316" font-family="Arial, sans-serif" font-size="10" font-weight="600" fill="rgba(255,255,255,0.5)" letter-spacing="1.5">PROCESSING FEE</text>
+  <text x="50" y="342" font-family="Arial, sans-serif" font-size="28" font-weight="900" fill="#fb923c">Rs.500</text>
+  <rect x="230" y="290" width="240" height="65" fill="rgba(255,255,255,0.06)" rx="12"/>
+  <text x="250" y="316" font-family="Arial, sans-serif" font-size="10" font-weight="600" fill="rgba(255,255,255,0.5)" letter-spacing="1.5">LOAN TYPES</text>
+  <text x="250" y="335" font-family="Arial, sans-serif" font-size="12" fill="rgba(255,255,255,0.8)">* Personal &amp; Business Loans</text>
+  <text x="250" y="350" font-family="Arial, sans-serif" font-size="12" fill="rgba(255,255,255,0.8)">* Home &amp; Vehicle Loans</text>
+  <rect x="0" y="400" width="800" height="100" fill="rgba(0,0,0,0.3)"/>
+  <rect x="0" y="400" width="800" height="3" fill="url(#lac)"/>
+  <text x="50" y="435" font-family="Arial, sans-serif" font-size="11" font-weight="600" fill="rgba(255,255,255,0.5)" letter-spacing="1">APPLY NOW</text>
+  <text x="50" y="460" font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="white">Call: 9951119995 | Deshaipet Road, Warangal</text>
+  <rect x="580" y="420" width="190" height="55" fill="rgba(147,51,234,0.3)" rx="10" stroke="#c084fc" stroke-width="1"/>
+  <text x="612" y="445" font-family="Arial, sans-serif" font-size="11" font-weight="700" fill="#c084fc">Bank Partners</text>
+  <text x="600" y="463" font-family="Arial, sans-serif" font-size="10" fill="rgba(255,255,255,0.6)">SBI | HDFC | ICICI | Axis</text>
+</svg>

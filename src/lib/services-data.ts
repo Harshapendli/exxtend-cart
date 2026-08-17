@@ -348,7 +348,7 @@ export const SERVICES: Service[] = [
     iconName: 'HiTicket',
     category: 'Travel & Bookings',
     description: 'IRCTC Train ticket booking assistance — Tatkal, general, and premium bookings. Confirmation guaranteed support.',
-    imageUrl: '/posters/services-banner.jpg',
+    imageUrl: '/posters/train-tickets.svg',
     requirements: [
       'Passenger name(s) and age(s)',
       'Travel date and preferred train',
@@ -365,7 +365,7 @@ export const SERVICES: Service[] = [
     iconName: 'HiPaperAirplane',
     category: 'Travel & Bookings',
     description: 'Domestic and international flight ticket booking assistance. Best fare search and cancellation/rescheduling help.',
-    imageUrl: '/posters/services-banner.jpg',
+    imageUrl: '/posters/flight-bookings.svg',
     requirements: [
       'Passenger name(s) as per ID',
       'Travel dates and preferred airlines',
@@ -382,7 +382,7 @@ export const SERVICES: Service[] = [
     iconName: 'HiShieldCheck',
     category: 'Online Services',
     description: 'Life, health, and vehicle insurance policy assistance. New policy registration, renewals, and claim support.',
-    imageUrl: '/posters/services-banner.jpg',
+    imageUrl: '/posters/insurance-services.svg',
     requirements: [
       'Aadhaar Card & PAN Card',
       'Age proof',
@@ -401,7 +401,7 @@ export const SERVICES: Service[] = [
     iconName: 'HiBanknotes',
     category: 'Online Services',
     description: 'Personal, business, home, and vehicle loan application assistance. Documentation and bank coordination support.',
-    imageUrl: '/posters/services-banner.jpg',
+    imageUrl: '/posters/loan-services.svg',
     requirements: [
       'Aadhaar Card & PAN Card',
       'Income proof (Salary slips / ITR)',
@@ -421,7 +421,7 @@ export const SERVICES: Service[] = [
     iconName: 'HiCurrencyRupee',
     category: 'Online Services',
     description: 'Provident Fund (PF) claim and withdrawal assistance. UAN activation, KYC update, and online claim filing.',
-    imageUrl: '/posters/services-banner.jpg',
+    imageUrl: '/posters/pf-withdrawal.svg',
     requirements: [
       'UAN (Universal Account Number)',
       'Aadhaar Card (linked to UAN)',
@@ -479,7 +479,7 @@ export const SERVICES: Service[] = [
     iconName: 'HiStar',
     category: 'Travel & Bookings',
     description: 'Tirumala Tirupati Devasthanams (TTD) Seva, Darshan, and accommodation bookings. Quick slot confirmation.',
-    imageUrl: '/posters/services-banner.jpg',
+    imageUrl: '/posters/ttd-seva.svg',
     requirements: [
       'Aadhaar Card of all pilgrims',
       'Mobile number for OTP verification',
