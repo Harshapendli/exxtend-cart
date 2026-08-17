@@ -28,7 +28,7 @@ export default function OwnerSection() {
               <div className="relative w-64 h-80 md:w-72 md:h-96 rounded-3xl overflow-hidden border-4 border-white shadow-xl">
                 <img
                   src="/owner-photo.jpg"
-                  alt="Ponnala Praveen Reddy — Founder, EXTEND KART"
+                  alt="Ponnala Praveen — Founder, EXTEND KART"
                   className="w-full h-full object-cover object-top"
                   onError={(e) => {
                     // Fallback to initials if photo not loaded
@@ -68,7 +68,7 @@ export default function OwnerSection() {
             </motion.span>
 
             <WordReveal
-              text="Ponnala Praveen Reddy"
+              text="Ponnala Praveen"
               className="text-3xl md:text-4xl font-black font-display text-gray-950 leading-tight"
               tag="h2"
             />
@@ -90,10 +90,10 @@ export default function OwnerSection() {
               transition={{ delay: 0.4 }}
               className="text-sm text-gray-500 font-sans leading-relaxed max-w-xl"
             >
-              With years of expertise in government registrations, digital printing, and documentation services,
-              Praveen Reddy founded EXTEND KART to simplify bureaucratic processes for the people of Warangal.
+              With 17+ years of expertise in government registrations, digital printing, and documentation services,
+              Praveen founded EXTEND KART to simplify bureaucratic processes for the people of Warangal.
               What started as a small service center has grown into Warangal's most trusted digital service hub,
-              serving thousands of customers with 40+ services under one roof.
+              serving 5000+ customers with 40+ services under one roof.
             </motion.p>
 
             {/* Contact & details */}
@@ -144,12 +144,12 @@ export default function OwnerSection() {
               className="flex items-center gap-6 pt-4"
             >
               <div className="text-center">
-                <span className="text-2xl font-black text-gray-950 font-display">5+</span>
+                <span className="text-2xl font-black text-gray-950 font-display">17+</span>
                 <p className="text-[10px] font-bold text-gray-400 uppercase tracking-wider">Years Exp.</p>
               </div>
               <div className="w-px h-10 bg-gray-200" />
               <div className="text-center">
-                <span className="text-2xl font-black text-gray-950 font-display">1000+</span>
+                <span className="text-2xl font-black text-gray-950 font-display">5000+</span>
                 <p className="text-[10px] font-bold text-gray-400 uppercase tracking-wider">Customers</p>
               </div>
               <div className="w-px h-10 bg-gray-200" />

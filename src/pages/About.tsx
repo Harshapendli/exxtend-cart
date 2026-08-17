@@ -82,7 +82,7 @@ export default function About() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { val: '500+', label: 'Customers Served' },
+              { val: '5000+', label: 'Customers Served' },
               { val: '4.9 ⭐', label: 'Google Rating' },
               { val: '40+', label: 'Services Available' },
               { val: '17+ Years', label: 'Active Experience' },
