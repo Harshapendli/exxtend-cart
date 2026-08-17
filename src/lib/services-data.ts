@@ -65,22 +65,6 @@ export const SERVICES: Service[] = [
     ],
   },
   {
-    id: 'fssai-pricing-consultation',
-    name: 'FSSAI Licence Pricing',
-    price: 1000,
-    priceLabel: '₹1,000',
-    iconName: 'HiShieldCheck',
-    category: 'Licences',
-    description: 'Expert FSSAI licence consultation with transparent pricing, legal guarantee, and zero hidden fees. Get the right licence for your business.',
-    imageUrl: '/posters/fssai.jpg',
-    requirements: [
-      'Business type & turnover details',
-      'Type of food products handled',
-      'Business address details',
-      'Owner Aadhaar Card',
-    ],
-  },
-  {
     id: 'udyam-msme',
     name: 'UDYAM / MSME Registration',
     price: 300,
