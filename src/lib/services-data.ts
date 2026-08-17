@@ -50,7 +50,7 @@ export const SERVICES: Service[] = [
     iconName: 'HiShieldCheck',
     category: 'Licences',
     description: 'FSSAI Central Licence for large businesses with turnover above ₹20 Crore or Import-Export operations. Full compliance assistance.',
-    imageUrl: '/posters/fssai.jpg',
+    imageUrl: '/posters/fssai-central.jpg',
     requirements: [
       'Aadhaar Card & PAN Card of the owner/directors',
       'Passport-size photographs',
