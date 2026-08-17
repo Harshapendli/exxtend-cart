@@ -25,7 +25,7 @@ import { toast } from 'react-hot-toast';
 
 // Admin credentials — change these to your own
 const ADMIN_USERNAME = 'admin';
-const ADMIN_PASSWORD = 'ExtendKart@2024';
+const ADMIN_PASSWORD = 'Warangal@1';
 
 // Session key for localStorage
 const SESSION_KEY = 'ek_admin_session';
