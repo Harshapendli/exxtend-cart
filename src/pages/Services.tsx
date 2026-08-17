@@ -102,33 +102,68 @@ export default function Services() {
   return (
     <div id="services-view" className="bg-white">
       {/* Mini Hero Banner */}
-      <section className="relative py-20 bg-gray-50 border-b border-gray-100 flex items-center justify-center text-center">
+      <section className="relative py-20 bg-gray-50 border-b border-gray-100 flex items-center justify-center text-center overflow-hidden">
         <div className="absolute inset-0 opacity-[0.02] pointer-events-none select-none bg-[radial-gradient(#1D9E75_1px,transparent_1px)] [background-size:24px_24px]" />
-        
-        <div className="max-w-3xl mx-auto px-6 space-y-4">
+        {/* Animated floating shapes */}
+        <motion.div
+          animate={{ y: [0, -15, 0], rotate: [0, 5, 0] }}
+          transition={{ duration: 6, repeat: Infinity, ease: 'easeInOut' }}
+          className="absolute left-[10%] top-[20%] w-16 h-16 rounded-2xl bg-brand/5 rotate-12"
+        />
+        <motion.div
+          animate={{ y: [0, 15, 0], rotate: [0, -5, 0] }}
+          transition={{ duration: 8, repeat: Infinity, ease: 'easeInOut' }}
+          className="absolute right-[15%] bottom-[20%] w-20 h-20 rounded-full bg-blue-500/5"
+        />
+        <motion.div
+          animate={{ y: [0, -10, 0], x: [0, 10, 0] }}
+          transition={{ duration: 7, repeat: Infinity, ease: 'easeInOut' }}
+          className="absolute right-[10%] top-[30%] w-12 h-12 rounded-xl bg-amber-500/5 rotate-45"
+        />
+
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+          className="max-w-3xl mx-auto px-6 space-y-4 relative z-10"
+        >
           <span className="section-label">Service Catalog</span>
-          <h1 className="text-4xl md:text-5xl font-black font-display text-gray-950 leading-none">
-            Services & Transparent Pricing
+          <h1 className="text-4xl md:text-5xl font-black font-display leading-none">
+            <span className="text-gray-950">Services & </span>
+            <span className="bg-gradient-to-r from-brand via-brand-light to-brand bg-clip-text text-transparent animate-gradient-x bg-[length:200%]">
+              Transparent Pricing
+            </span>
           </h1>
           <p className="text-sm md:text-base text-gray-500 max-w-xl mx-auto font-sans">
             Quick, reliable, and hassle-free registrations with instant processing. Clear rates with no hidden fees.
           </p>
-        </div>
+
+          {/* Service count badge */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ delay: 0.3 }}
+            className="inline-flex items-center gap-2 bg-white border border-gray-100 px-4 py-2 rounded-full shadow-soft text-xs font-bold text-gray-600"
+          >
+            <span className="w-2 h-2 rounded-full bg-brand animate-pulse" />
+            {filteredServices.length} services available
+          </motion.div>
+        </motion.div>
       </section>
 
       {/* Directory Filter & Search Row */}
-      <section className="py-12 border-b border-gray-100 bg-white sticky top-20 z-30 shadow-soft">
-        <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
-          
-          {/* Category tabs */}
-          <div className="flex flex-wrap items-center gap-1.5 p-1 bg-gray-50 border border-gray-100 rounded-2xl w-full md:w-auto">
+      <section className="py-3 border-b border-gray-100 bg-white/80 backdrop-blur-xl sticky top-20 z-30">
+        <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-3">
+
+          {/* Category tabs — compact horizontal scroll on mobile */}
+          <div className="flex items-center gap-1 p-1 bg-gray-50 border border-gray-100 rounded-xl w-full md:w-auto overflow-x-auto no-scrollbar">
             {CATEGORIES.map((cat) => {
               const isActive = selectedCategory === cat;
               return (
                 <button
                   key={cat}
                   onClick={() => setSelectedCategory(cat)}
-                  className={`flex-1 md:flex-none px-5 py-2.5 rounded-xl text-xs font-bold uppercase tracking-wider transition-all cursor-pointer ${
+                  className={`flex-shrink-0 px-4 py-2 rounded-lg text-[10px] font-bold uppercase tracking-wider transition-all cursor-pointer ${
                     isActive
                       ? 'bg-[#1D9E75] text-white shadow-glow'
                       : 'text-gray-500 hover:text-gray-900 hover:bg-white/50'
@@ -141,14 +176,14 @@ export default function Services() {
           </div>
 
           {/* Search box */}
-          <div className="relative w-full md:max-w-sm">
-            <HiMagnifyingGlass className="absolute left-4 top-1/2 -translate-y-1/2 h-4 w-4 text-gray-400" />
+          <div className="relative w-full md:max-w-xs">
+            <HiMagnifyingGlass className="absolute left-3 top-1/2 -translate-y-1/2 h-3.5 w-3.5 text-gray-400" />
             <input
               type="text"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              placeholder="Search services (e.g., FSSAI, MSME)..."
-              className="w-full bg-gray-50 border border-gray-100 rounded-2xl pl-11 pr-5 py-3 text-xs font-medium focus:outline-none focus:bg-white focus:border-brand focus:ring-1 focus:ring-brand transition-all"
+              placeholder="Search services..."
+              className="w-full bg-gray-50 border border-gray-100 rounded-xl pl-9 pr-4 py-2 text-xs font-medium focus:outline-none focus:bg-white focus:border-brand focus:ring-1 focus:ring-brand transition-all"
             />
           </div>
 

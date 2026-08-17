@@ -4,7 +4,7 @@ export interface Service {
   price: number;
   priceLabel: string;
   iconName: string; // Name of the Lucide or Hi2 icon to render dynamically
-  category: 'Licences' | 'Documents' | 'Printing' | 'Online Services' | 'Registration Services' | 'Bhu Bharati Services';
+  category: 'Licences' | 'Documents' | 'Printing' | 'Online Services' | 'Registration Services' | 'Bhu Bharati Services' | 'MeeSeva Services' | 'Travel & Bookings';
   description: string;
   imageUrl?: string; // High-resolution flyer or menu image reference
   requirements?: string[]; // Documents / items required from customer

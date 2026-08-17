@@ -6,6 +6,7 @@ import { Toaster } from 'react-hot-toast';
 import Navbar from './components/Navbar';
 import CartSheet from './components/CartSheet';
 import WhatsAppButton from './components/WhatsAppButton';
+import ScrollProgress from './components/ScrollProgress';
 import Footer from './components/Footer';
 
 // Pages
@@ -100,6 +101,9 @@ export default function App() {
 
       {/* Sliding shopping cart drawer - Hidden on Admin */}
       {currentTab !== 'admin' && <CartSheet onSuccessRedirect={() => setCurrentTab('success')} />}
+
+      {/* Scroll Progress Bar & Back to Top */}
+      {currentTab !== 'admin' && <ScrollProgress />}
 
       {/* Floating interactive WhatsApp agent - Hidden on Admin */}
       {currentTab !== 'admin' && <WhatsAppButton />}

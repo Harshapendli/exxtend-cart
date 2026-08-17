@@ -4,7 +4,7 @@ import { Service } from '../types';
 import { useCartStore } from '../lib/cart-store';
 import { formatPrice } from '../lib/utils';
 import IconRenderer from './IconRenderer';
-import { HiPlus, HiCheck, HiChevronDown, HiCheckCircle } from 'react-icons/hi2';
+import { HiPlus, HiCheck, HiChevronDown, HiCheckCircle, HiSparkles } from 'react-icons/hi2';
 
 interface ServiceCardProps {
   service: Service;
@@ -22,8 +22,12 @@ export default function ServiceCard({ service, index }: ServiceCardProps) {
     e.stopPropagation();
     addItem({ id: service.id, name: service.name, price: service.price });
     setAdded(true);
+    setShowSparkle(true);
     setTimeout(() => setAdded(false), 2000);
+    setTimeout(() => setShowSparkle(false), 800);
   };
+
+  const [showSparkle, setShowSparkle] = useState(false);
 
   return (
     <>
@@ -37,7 +41,35 @@ export default function ServiceCard({ service, index }: ServiceCardProps) {
         id={`service-card-${service.id}`}
       >
         {/* Top Accent Line - Scales up on card hover */}
-        <div className="absolute top-0 left-0 right-0 h-[3px] bg-brand scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-300" />
+        <div className="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-brand via-brand-light to-brand scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500" />
+
+        {/* Hover gradient glow */}
+        <div className="absolute -inset-px rounded-2xl bg-gradient-to-br from-brand/0 via-transparent to-brand/0 group-hover:from-brand/5 group-hover:to-blue-500/5 transition-all duration-500 pointer-events-none" />
+
+        {/* Sparkle particles on add to cart */}
+        <AnimatePresence>
+          {showSparkle && (
+            <>
+              {[...Array(6)].map((_, i) => (
+                <motion.div
+                  key={`sparkle-${i}`}
+                  initial={{ opacity: 1, scale: 0, x: '80%', y: '90%' }}
+                  animate={{
+                    opacity: 0,
+                    scale: 1.5,
+                    x: `${70 + Math.random() * 30}%`,
+                    y: `${60 + Math.random() * 30}%`,
+                  }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 0.6, delay: i * 0.05 }}
+                  className="absolute pointer-events-none"
+                >
+                  <HiSparkles className="h-3 w-3 text-amber-400" />
+                </motion.div>
+              ))}
+            </>
+          )}
+        </AnimatePresence>
 
         <div>
           {/* Service Icon and Category */}
@@ -52,20 +84,25 @@ export default function ServiceCard({ service, index }: ServiceCardProps) {
 
           {/* Optional Flyer Image with zoom action */}
           {service.imageUrl && (
-            <div
+            <motion.div
               onClick={() => setShowZoom(true)}
               className="relative h-48 w-full rounded-xl overflow-hidden mb-5 border border-gray-100 bg-gray-50 cursor-zoom-in"
+              whileHover={{ scale: 1.02 }}
+              transition={{ type: 'spring', stiffness: 300, damping: 20 }}
             >
+              {/* Shimmer loading placeholder */}
+              <div className="absolute inset-0 animate-shimmer bg-gradient-to-r from-gray-100 via-gray-50 to-gray-100 bg-[length:200%_100%]" />
               <img
                 src={service.imageUrl}
                 alt={`${service.name} Flyer`}
                 referrerPolicy="no-referrer"
-                className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-[1.04]"
+                loading="lazy"
+                className="relative z-10 w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-[1.04]"
               />
-              <div className="absolute bottom-2.5 right-2.5 bg-gray-950/70 backdrop-blur px-2 py-1 rounded text-[8px] font-black text-white uppercase tracking-wider">
+              <div className="absolute bottom-2.5 right-2.5 z-20 bg-gray-950/70 backdrop-blur px-2 py-1 rounded text-[8px] font-black text-white uppercase tracking-wider opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 Click to Zoom Flyer
               </div>
-            </div>
+            </motion.div>
           )}
 
           {/* Name and Description */}

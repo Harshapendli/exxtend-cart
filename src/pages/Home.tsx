@@ -8,6 +8,7 @@ import TestimonialsCarousel from '../components/TestimonialsCarousel';
 import WhyChooseUs from '../components/WhyChooseUs';
 import PaymentStrip from '../components/PaymentStrip';
 import CTABanner from '../components/CTABanner';
+import OwnerSection from '../components/OwnerSection';
 import { SERVICES } from '../lib/services-data';
 import { HiArrowRight } from 'react-icons/hi2';
 import { motion } from 'motion/react';
@@ -96,6 +97,9 @@ export default function Home({ onNavigate }: HomeProps) {
 
       {/* Verified Reviews Carousel */}
       <TestimonialsCarousel />
+
+      {/* Meet the Founder */}
+      <OwnerSection />
 
       {/* Payment Channels Info */}
       <PaymentStrip />
