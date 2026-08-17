@@ -251,6 +251,7 @@ export const SERVICES: Service[] = [
     iconName: 'HiClipboardDocumentList',
     category: 'Documents',
     description: 'New Ration Card application, name addition/deletion, and address corrections. Full assistance with online process.',
+    imageUrl: '/posters/ration-card.jpg',
     requirements: [
       'Aadhaar Cards of all family members',
       'Address proof (Electricity bill / Gas bill)',
@@ -519,7 +520,7 @@ export const SERVICES: Service[] = [
     iconName: 'HiCreditCard',
     category: 'Printing',
     description: 'High-quality PVC card printing — ID cards, Aadhaar, PAN, business cards, and employee ID cards.',
-    imageUrl: '/posters/pvc-cards.jpg',
+    imageUrl: '/posters/pvc-card.jpg',
     requirements: [
       'Soft copy of the card content / design',
       'Photograph (high resolution)',
@@ -1074,6 +1075,7 @@ export const SERVICES: Service[] = [
     iconName: 'HiMap',
     category: 'Bhu Bharati Services',
     description: 'ROR / 1B record correction services on Bhu Bharati Portal. Name, extent, and survey number corrections.',
+    imageUrl: '/posters/bhu-bharati.jpg',
     requirements: [
       'Pattadar Passbook',
       'Aadhaar Card of the Pattadar',
@@ -1090,6 +1092,7 @@ export const SERVICES: Service[] = [
     iconName: 'HiMap',
     category: 'Bhu Bharati Services',
     description: 'Agriculture Land Slots Booking on Bhu Bharati Portal. Online slot reservation for land registration appointments.',
+    imageUrl: '/posters/bhu-bharati.jpg',
     requirements: [
       'Aadhaar Card of both buyer & seller',
       'Pattadar Passbook',
@@ -1106,6 +1109,7 @@ export const SERVICES: Service[] = [
     iconName: 'HiClipboardDocumentList',
     category: 'Bhu Bharati Services',
     description: 'Pattadar Passbook name correction on Bhu Bharati Portal. Update Pattadar details as per government records.',
+    imageUrl: '/posters/bhu-bharati.jpg',
     requirements: [
       'Existing Pattadar Passbook',
       'Aadhaar Card (with correct name)',
@@ -1121,6 +1125,7 @@ export const SERVICES: Service[] = [
     iconName: 'HiMagnifyingGlass',
     category: 'Bhu Bharati Services',
     description: 'Land Details Search on Bhu Bharati Portal — survey number lookup, ownership verification, and extent details.',
+    imageUrl: '/posters/bhu-bharati.jpg',
     requirements: [
       'Survey number',
       'Village name',
@@ -1136,6 +1141,7 @@ export const SERVICES: Service[] = [
     iconName: 'HiDocumentCheck',
     category: 'Bhu Bharati Services',
     description: 'Pattadar Passbook data correction on Bhu Bharati — update extent, survey number, village name, and other land records.',
+    imageUrl: '/posters/bhu-bharati.jpg',
     requirements: [
       'Existing Pattadar Passbook',
       'Aadhaar Card of the Pattadar',

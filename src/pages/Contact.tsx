@@ -93,6 +93,19 @@ export default function Contact() {
                 We respond to all online inquiries within 2 hours during normal business operations. Drop by our retail outlet or dial our direct line.
               </p>
 
+              {/* Store Exterior */}
+              <div className="rounded-2xl overflow-hidden border border-gray-100 shadow-soft">
+                <img
+                  src="/store-exterior.jpg"
+                  alt="EXTEND KART Store — Deshaipet Road, Warangal"
+                  className="w-full h-44 object-cover"
+                  loading="lazy"
+                />
+                <div className="px-4 py-2.5 bg-white">
+                  <p className="text-[11px] font-bold text-gray-500 uppercase tracking-wider">Our Store · Deshaipet Road, Warangal</p>
+                </div>
+              </div>
+
               {/* Grid of Cards */}
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-6 pt-4">
                 {contactCards.map((card, i) => {

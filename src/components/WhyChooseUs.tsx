@@ -30,10 +30,10 @@ const FEATURES = [
   },
   {
     title: 'Expert Consulting Team',
-    description: 'Years of local experience handling FSSAI, MSME, property registrations, and compliance.',
+    description: '17+ years of local experience handling FSSAI, MSME, property registrations, and compliance.',
     icon: HiUserGroup,
     gradient: 'from-purple-400 to-purple-600',
-    stat: '5+',
+    stat: '17+',
     statLabel: 'Years Exp.',
   },
 ];
