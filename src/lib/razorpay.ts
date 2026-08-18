@@ -112,10 +112,40 @@ export async function checkoutWithRazorpay({
         name: 'EXTEND KART',
         description: serviceNames.substring(0, 255),
         order_id: data.orderId,
-        handler: function (res: any) {
-          toast.success('Payment verified successfully! 🎉');
-          onSuccess(res.razorpay_payment_id || 'pay_success');
-          resolve(res);
+        handler: async function (paymentRes: any) {
+          // Step 3: Verify payment signature on the backend
+          try {
+            const verifyToast = toast.loading('Verifying payment...');
+            const verifyResponse = await fetch('/api/verify-payment', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({
+                razorpay_order_id: paymentRes.razorpay_order_id,
+                razorpay_payment_id: paymentRes.razorpay_payment_id,
+                razorpay_signature: paymentRes.razorpay_signature,
+              }),
+            });
+            toast.dismiss(verifyToast);
+
+            const verifyData = await verifyResponse.json();
+
+            if (verifyData.success) {
+              toast.success('Payment verified successfully! 🎉');
+              onSuccess(paymentRes.razorpay_payment_id);
+              resolve(paymentRes);
+            } else {
+              toast.error('Payment verification failed. Please contact support.');
+              onFailure('Payment signature verification failed');
+              reject(new Error('Signature verification failed'));
+            }
+          } catch (verifyErr) {
+            // If verification endpoint is unreachable, still accept the payment
+            // (it went through Razorpay successfully — verify manually in dashboard)
+            console.warn('Verification endpoint error:', verifyErr);
+            toast.success('Payment received! Verification pending.');
+            onSuccess(paymentRes.razorpay_payment_id || 'pay_success');
+            resolve(paymentRes);
+          }
         },
         modal: {
           ondismiss: function () {
