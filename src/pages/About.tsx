@@ -145,7 +145,7 @@ export default function About() {
             {/* Map Frame */}
             <div className="lg:col-span-7 bg-white p-3 rounded-[32px] border border-gray-100 shadow-soft h-[400px]">
               <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3795.123!2d79.5876!3d17.9784!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTfCsDU4JzQyLjIiTiA3OcKwMzUnMTUuNCJF!5e0!3m2!1sen!2sin!4v1234567890"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d950.0!2d79.58842!3d17.97298!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a3349e1e7a3b0a7%3A0x4b07fabe40fa74c!2sExtend+Kart!5e0!3m2!1sen!2sin!4v1692000000000"
                 className="w-full h-full rounded-[24px]"
                 style={{ border: 0 }}
                 allowFullScreen={true}

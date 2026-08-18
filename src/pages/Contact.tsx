@@ -41,7 +41,7 @@ export default function Contact() {
       title: 'Our Office Address',
       desc: '11-23-2394/1, Deshaipet-Enumamula Rd, Navayuga Colony, Warangal, TS 506002',
       icon: HiMapPin,
-      link: 'https://maps.google.com/?q=EXTEND+KART+Warangal'
+      link: 'https://www.google.com/maps/search/Extend+Kart+Deshaipet+Road+Navayuga+Colony+Warangal'
     },
     {
       title: 'Call / Phone Support',
