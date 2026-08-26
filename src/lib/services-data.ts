@@ -251,7 +251,7 @@ export const SERVICES: Service[] = [
     iconName: 'HiClipboardDocumentList',
     category: 'Documents',
     description: 'New Ration Card application, name addition/deletion, and address corrections. Full assistance with online process.',
-    imageUrl: '/posters/ration-card.jpg',
+    imageUrl: '/Ration card.jpeg',
     requirements: [
       'Aadhaar Cards of all family members',
       'Address proof (Electricity bill / Gas bill)',
@@ -313,7 +313,7 @@ export const SERVICES: Service[] = [
     iconName: 'HiPaperAirplane',
     category: 'Online Services',
     description: 'US Visa appointment slot booking assistance. DS-160 form filling, interview preparation guidance, and documentation support.',
-    imageUrl: '/posters/us-visa.jpg',
+    imageUrl: '/US Visa Appointment.jpg',
     requirements: [
       'Valid Passport (6+ months validity)',
       'DS-160 confirmation page',
@@ -500,6 +500,7 @@ export const SERVICES: Service[] = [
     iconName: 'HiComputerDesktop',
     category: 'Online Services',
     description: 'General online form filling and application submission for any government or private portal. Job applications, exam registrations, and more.',
+    imageUrl: '/ONLINE APPLICATION.jpeg',
     requirements: [
       'Aadhaar Card',
       'Passport-size photograph (digital)',
@@ -551,7 +552,7 @@ export const SERVICES: Service[] = [
     iconName: 'HiPrinter',
     category: 'Printing',
     description: 'Custom T-shirt printing with your designs, logos, or photos. Bulk orders available for events and businesses.',
-    imageUrl: '/posters/tshirts.jpg',
+    imageUrl: '/T SHIRT.jpeg',
     requirements: [
       'Design / logo / image file (high resolution)',
       'T-shirt color preference',
@@ -568,7 +569,7 @@ export const SERVICES: Service[] = [
     iconName: 'HiRectangleGroup',
     category: 'Printing',
     description: 'Custom fridge magnets with your photos, logos, or designs. Perfect for gifts, souvenirs, and branding.',
-    imageUrl: '/posters/fridge-magnets.jpg',
+    imageUrl: '/FRIDGE MAGNETS.jpeg',
     requirements: [
       'Photo / design file (high resolution)',
       'Preferred shape (round / square / custom)',
@@ -603,6 +604,7 @@ export const SERVICES: Service[] = [
     iconName: 'HiDocumentText',
     category: 'Registration Services',
     description: 'Property Sale Deed drafting and registration. Complete stamp duty calculation, documentation, and SRO coordination.',
+    imageUrl: '/IGRS.jpeg',
     requirements: [
       'Aadhaar Cards of buyer & seller',
       'PAN Cards of buyer & seller',
@@ -622,6 +624,7 @@ export const SERVICES: Service[] = [
     iconName: 'HiDocumentText',
     category: 'Registration Services',
     description: 'Property Gift Deed registration services. Legal drafting, valuation assistance, and sub-registrar office filing.',
+    imageUrl: '/IGRS.jpeg',
     requirements: [
       'Aadhaar Cards of donor & donee',
       'PAN Cards of both parties',
@@ -640,6 +643,7 @@ export const SERVICES: Service[] = [
     iconName: 'HiDocumentText',
     category: 'Registration Services',
     description: 'Property Partition Deed registration for joint property division. Legal documentation and family settlement support.',
+    imageUrl: '/IGRS.jpeg',
     requirements: [
       'Aadhaar Cards of all parties',
       'PAN Cards of all parties',
@@ -659,6 +663,7 @@ export const SERVICES: Service[] = [
     iconName: 'HiUserGroup',
     category: 'Registration Services',
     description: 'Family Release Deed registration — release of rights by family members on property. Full legal drafting and SRO filing.',
+    imageUrl: '/IGRS.jpeg',
     requirements: [
       'Aadhaar Cards of all family members involved',
       'PAN Cards of all parties',
@@ -677,6 +682,7 @@ export const SERVICES: Service[] = [
     iconName: 'HiHome',
     category: 'Registration Services',
     description: 'Property Mortgage registration services. Documentation for bank mortgage, equitable mortgage, and mortgage release.',
+    imageUrl: '/IGRS.jpeg',
     requirements: [
       'Aadhaar Card & PAN Card of property owner',
       'Original property documents',
@@ -695,6 +701,7 @@ export const SERVICES: Service[] = [
     iconName: 'HiBanknotes',
     category: 'Registration Services',
     description: 'Bank Release / Mortgage Release deed registration. Complete assistance with NOC from bank and SRO filing.',
+    imageUrl: '/IGRS.jpeg',
     requirements: [
       'Aadhaar Card & PAN Card of property owner',
       'NOC (No Objection Certificate) from the bank',
@@ -713,6 +720,7 @@ export const SERVICES: Service[] = [
     iconName: 'HiScale',
     category: 'Registration Services',
     description: 'Development Agreement cum General Power of Attorney registration. Builder-landowner agreement documentation and filing.',
+    imageUrl: '/IGRS.jpeg',
     requirements: [
       'Aadhaar Cards & PAN Cards of landowner & developer',
       'Original property / land documents',
@@ -731,6 +739,7 @@ export const SERVICES: Service[] = [
     iconName: 'HiKey',
     category: 'Registration Services',
     description: 'General Power of Attorney drafting and registration. Authorized representation for property and legal matters.',
+    imageUrl: '/IGRS.jpeg',
     requirements: [
       'Aadhaar Card & PAN Card of the principal (person giving power)',
       'Aadhaar Card & PAN Card of the agent (person receiving power)',
@@ -748,6 +757,7 @@ export const SERVICES: Service[] = [
     iconName: 'HiClipboardDocumentCheck',
     category: 'Registration Services',
     description: 'Agreement of Sale (AOS) drafting and registration. Pre-sale legal documentation with terms, conditions, and advance receipt.',
+    imageUrl: '/IGRS.jpeg',
     requirements: [
       'Aadhaar Cards & PAN Cards of buyer & seller',
       'Property documents / title deed',
@@ -765,6 +775,7 @@ export const SERVICES: Service[] = [
     iconName: 'HiDocumentText',
     category: 'Registration Services',
     description: 'Lease and Rental Agreement drafting, notarization, and registration. Residential and commercial property agreements.',
+    imageUrl: '/IGRS.jpeg',
     requirements: [
       'Aadhaar Cards of landlord & tenant',
       'Property ownership proof / previous agreement',
@@ -782,6 +793,7 @@ export const SERVICES: Service[] = [
     iconName: 'HiMagnifyingGlass',
     category: 'Registration Services',
     description: 'Single Search report from Sub-Registrar Office. Verify property ownership history and transaction records.',
+    imageUrl: '/IGRS.jpeg',
     requirements: [
       'Document number / year of registration',
       'Sub-Registrar Office (SRO) jurisdiction',
@@ -797,6 +809,7 @@ export const SERVICES: Service[] = [
     iconName: 'HiDocumentCheck',
     category: 'Registration Services',
     description: 'Obtain Certified Copies (CC) of registered documents from the Sub-Registrar Office. Quick application and collection.',
+    imageUrl: '/IGRS.jpeg',
     requirements: [
       'Document number & year of registration',
       'Sub-Registrar Office (SRO) name',
@@ -812,6 +825,7 @@ export const SERVICES: Service[] = [
     iconName: 'HiCurrencyRupee',
     category: 'Registration Services',
     description: 'Government Market Value / Guideline Value enquiry for properties. Calculate stamp duty and registration charges.',
+    imageUrl: '/IGRS.jpeg',
     requirements: [
       'Property location / address',
       'Survey number / plot number',
@@ -827,6 +841,7 @@ export const SERVICES: Service[] = [
     iconName: 'HiMagnifyingGlass',
     category: 'Registration Services',
     description: 'Encumbrance Certificate (EC) application and procurement. Verify property is free from legal dues and mortgages.',
+    imageUrl: '/IGRS.jpeg',
     requirements: [
       'Property document number & year',
       'Sub-Registrar Office (SRO) jurisdiction',
@@ -843,6 +858,7 @@ export const SERVICES: Service[] = [
     iconName: 'HiBuildingOffice2',
     category: 'Registration Services',
     description: 'Society and Partnership Firm registration. MOA/AOA drafting, bylaws preparation, and Registrar of Firms filing.',
+    imageUrl: '/IGRS.jpeg',
     requirements: [
       'Aadhaar Cards & PAN Cards of all partners / members',
       'Passport-size photographs of all partners',
@@ -1037,7 +1053,7 @@ export const SERVICES: Service[] = [
     iconName: 'HiBolt',
     category: 'MeeSeva Services',
     description: 'Electricity services — new connection, name change, load enhancement, and tariff category change through TGSPDCL.',
-    imageUrl: '/posters/meeseva.jpg',
+    imageUrl: '/TGSPDSCL.webp',
     requirements: [
       'Aadhaar Card',
       'Property ownership proof / Rent agreement',
@@ -1054,7 +1070,7 @@ export const SERVICES: Service[] = [
     iconName: 'HiShieldCheck',
     category: 'MeeSeva Services',
     description: 'Police Verification Certificate application for passport, employment, tenancy, and other purposes.',
-    imageUrl: '/posters/meeseva.jpg',
+    imageUrl: '/POLICE.jpeg',
     requirements: [
       'Aadhaar Card',
       'Address proof',
