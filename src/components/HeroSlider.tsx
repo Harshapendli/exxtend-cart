@@ -20,8 +20,8 @@ const SLIDES: Slide[] = [
   {
     badge: "Warangal's #1 Service Hub",
     heading: "All Government\nServices Under\nOne Roof",
-    subtitle: "FSSAI, MSME, Passport, Trade Licence, Property Registration, Bhu Bharati & 40+ services — fast turnaround, zero hassle.",
-    ctaText1: "Explore 40+ Services",
+    subtitle: "FSSAI, MSME, Passport, Trade Licence, Property Registration, Bhu Bharati & 60+ services — fast turnaround, zero hassle.",
+    ctaText1: "Explore 60+ Services",
     ctaLink1: "services",
     ctaText2: "Book Appointment",
     ctaLink2: "contact",

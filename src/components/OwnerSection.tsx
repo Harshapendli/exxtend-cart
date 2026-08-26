@@ -93,7 +93,7 @@ export default function OwnerSection() {
               With 17+ years of expertise in government registrations, digital printing, and documentation services,
               Praveen founded EXTEND KART to simplify bureaucratic processes for the people of Warangal.
               What started as a small service center has grown into Warangal's most trusted digital service hub,
-              serving 5000+ customers with 40+ services under one roof.
+              serving 3000+ customers with 60+ services under one roof.
             </motion.p>
 
             {/* Contact & details */}
@@ -149,7 +149,7 @@ export default function OwnerSection() {
               </div>
               <div className="w-px h-10 bg-gray-200" />
               <div className="text-center">
-                <span className="text-2xl font-black text-gray-950 font-display">5000+</span>
+                <span className="text-2xl font-black text-gray-950 font-display">3000+</span>
                 <p className="text-[10px] font-bold text-gray-400 uppercase tracking-wider">Customers</p>
               </div>
               <div className="w-px h-10 bg-gray-200" />

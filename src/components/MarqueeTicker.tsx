@@ -20,7 +20,7 @@ const TICKER_ITEMS = [
   '🏥 Insurance Services',
   '💰 PF Withdrawal',
   '🗺️ Bhu Bharati',
-  '🎯 40+ Services',
+  '🎯 60+ Services',
 ];
 
 export default function MarqueeTicker() {

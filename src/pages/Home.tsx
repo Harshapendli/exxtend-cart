@@ -75,7 +75,7 @@ export default function Home({ onNavigate }: HomeProps) {
               onClick={() => onNavigate('services')}
               className="group flex items-center gap-2 bg-gray-950 text-white px-6 py-3.5 rounded-2xl text-xs font-black uppercase tracking-wider transition-all duration-300 border border-gray-800 shrink-0 cursor-pointer hover:shadow-glow"
             >
-              <span>View All 40+ Services</span>
+              <span>View All 60+ Services</span>
               <HiArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
             </motion.button>
           </div>

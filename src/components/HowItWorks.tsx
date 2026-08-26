@@ -7,7 +7,7 @@ const STEPS = [
   {
     num: '01',
     title: 'Choose Service',
-    description: 'Browse our catalog of 40+ services — FSSAI, MSME, Passport, Property Registration and more.',
+    description: 'Browse our catalog of 60+ services — FSSAI, MSME, Passport, Property Registration and more.',
     icon: HiCursorArrowRays,
     color: 'from-emerald-400 to-emerald-600',
   },

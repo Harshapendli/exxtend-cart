@@ -228,13 +228,15 @@ export default function Contact() {
             </p>
           </div>
 
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6 md:gap-8">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-6 md:gap-8">
             {[
               { name: 'Ponnala Vasundara', role: 'Senior Executive', img: '/staff/vasundara.jpg' },
               { name: 'Pendli Raghupathi', role: 'Operations Lead', img: '/staff/raghupathi.jpg' },
               { name: 'Karampuri Vinay', role: 'Registration Specialist', img: '/staff/karampuri-vinay.jpg' },
               { name: 'Jannu Raghuram', role: 'Documentation Head', img: '/staff/raghuram.jpg' },
               { name: 'Thippani Vinay', role: 'Client Relations', img: '/staff/thippani-vinay.jpg' },
+              { name: 'Bolla Akhil', role: 'Graphic Design Executive', img: '/Bolla Akhil.jpeg' },
+              { name: 'Natte Shyam', role: 'Documentation Executive', img: '/Natte shyam.jpeg' },
             ].map((member, i) => (
               <motion.div
                 key={member.name}
@@ -276,7 +278,7 @@ export default function Contact() {
           </p>
           <div className="pt-2">
             <motion.a
-              href="https://wa.me/919951119995"
+              href="https://wa.me/919951119995?text=Hi%20EXTEND%20KART!%20I%20need%20a%20consultation%20regarding%20a%20service.%20Please%20assist%20me."
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ scale: 1.03 }}

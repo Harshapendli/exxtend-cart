@@ -73,13 +73,13 @@ export default function StatsStrip() {
             decimals={1}
           />
           <AnimatedCounter
-            value={500}
+            value={3000}
             suffix="+"
             label="Happy Customers"
             icon={HiHeart}
           />
           <AnimatedCounter
-            value={40}
+            value={60}
             suffix="+"
             label="Our Services"
             icon={HiWrenchScrewdriver}
